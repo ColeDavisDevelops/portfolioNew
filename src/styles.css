@@ -5,7 +5,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, 0.767);
+  background-color: white; 
 }
 
 body {
@@ -19,6 +19,10 @@ body {
   -ms-user-select: none;
   user-select: none;
   cursor: default;
+}
+
+.name {
+  
 }
 
 .hooks-main > svg {

@@ -1,18 +1,28 @@
 import React from 'react';
-import {useSpring, animated} from 'react-spring'
-import Goo from '../components/Goo';
-import ProjectCard from '../components/ProjectCard';
+import { makeStyles } from '@material-ui/core/styles';
+
+import Title from '../components/Title';
 import FlipCard from '../components/FlipCard';
 
+const useStyles = makeStyles((theme) => ({
+  title: {
+    position: 'absolute',
+    width: '100%',
+    top: '40%'
+  }
+}));
+
 const Home = () => {
-  const props = useSpring({opacity: 1, from: {opacity: 0}})
+  const classes = useStyles();
+
   return (
-    <div>
-      <animated.div style={props}>I will fade in</animated.div>
-      <div style={{marginLeft: "500px"}}>
-        <FlipCard/>
+    <> 
+      <div className={classes.title}>
+        {/* <Title/> */}
+        <FlipCard />
       </div>
-    </div>
+
+    </>
   )
 }
 
