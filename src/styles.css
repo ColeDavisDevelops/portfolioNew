@@ -126,3 +126,16 @@ body {
 .front {
   background-image: url(https://images.unsplash.com/photo-1540206395-68808572332f?ixlib=rb-1.2.1&w=1181&q=80&auto=format&fit=crop);
 }
+
+.menu-item {
+  padding: 0 40px;
+  margin: 5px 10px;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+}
+ 
+.scroll-menu-arrow {
+  padding: 20px;
+  cursor: pointer;
+}

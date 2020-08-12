@@ -3,6 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Title from '../components/Title';
 import FlipCard from '../components/FlipCard';
+import HorizontalScroll from './HorizontalScroll';
+import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -17,11 +19,10 @@ const Home = () => {
 
   return (
     <> 
-      <div className={classes.title}>
-        {/* <Title/> */}
-        <FlipCard />
-      </div>
-
+      {/* <div className={classes.title}>
+        <Title/>
+      </div> */}
+      <HorizontalScroll/>
     </>
   )
 }
