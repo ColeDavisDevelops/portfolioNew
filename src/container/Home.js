@@ -3,10 +3,13 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Title from '../components/Title';
 import FlipCard from '../components/FlipCard';
-import HorizontalScroll from './HorizontalScroll';
+import HorizontalContainer from './HorizontalContainer';
 import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
+  horizontalContainer: {
+    
+  },
   title: {
     position: 'absolute',
     width: '100%',
@@ -22,7 +25,8 @@ const Home = () => {
       {/* <div className={classes.title}>
         <Title/>
       </div> */}
-      <HorizontalScroll/>
+      <HorizontalContainer/>
+
     </>
   )
 }

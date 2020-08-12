@@ -8,9 +8,16 @@ const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWid
 const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const useStyles = makeStyles((theme) => ({
+  cardContainer: {
+    width: '100%',
+    height: '100vh',
+ 
+  },
   card: {
+    zIndex: 2,
+    position: 'absolute',
     minHeight: 870,
-    minWidth: 370,
+    width: 370,
     border: '10px solid black',
     borderRadius: 5,
     padding: 20,
@@ -49,8 +56,9 @@ const FlipCard = () => {
   
   const classes = useStyles();
   return (
-    <div onClick={() => setFlipped(state => !state)}>
+    <div className={classes.cardContainer} >
       <a.div 
+        onClick={() => setFlipped(state => !state)}
         className={`${classes.card} ${classes.front}`}
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
         onMouseLeave={() => set({ xys: [0, 0, 1] })}
@@ -64,7 +72,8 @@ const FlipCard = () => {
           src="https://raw.githubusercontent.com/Colebuildanddevelop/Portfolio/master/src/predictChoseGame.gif"
         />
       </a.div>
-      {/* <a.div 
+      <a.div 
+        onClick={() => setFlipped(state => !state)}
         className={classes.card}
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
         onMouseLeave={() => set({ xys: [0, 0, 1] })}
@@ -87,7 +96,7 @@ const FlipCard = () => {
         >
           Github
         </Button>
-      </a.div> */}
+      </a.div>
     </div>
   )
 }
