@@ -1,10 +1,10 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import Projects from './Projects';
+import MouseChaser from '../components/MouseChaser';
 
-import Title from '../components/Title';
-import FlipCard from '../components/FlipCard';
-import HorizontalContainer from './HorizontalContainer';
-import { Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+
 
 const useStyles = makeStyles((theme) => ({
   horizontalContainer: {
@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     width: '100%',
     top: '40%'
+  },
+  projects: {
+    margin: 'auto'
   }
 }));
 
@@ -21,13 +24,11 @@ const Home = () => {
   const classes = useStyles();
 
   return (
-    <> 
-      {/* <div className={classes.title}>
-        <Title/>
-      </div> */}
-      <HorizontalContainer/>
-
-    </>
+    <Grid container>
+      <Grid item xs={12} className={classes.projects}>
+        <MouseChaser />
+      </Grid>
+    </Grid>
   )
 }
 
