@@ -1,8 +1,6 @@
 import React from 'react'
 import { useTrail, animated } from 'react-spring'
-
 import { makeStyles } from '@material-ui/core/styles';
-
 // icons 
 import jsIcon from '../static/js.svg';
 import reactIcon from '../static/react.svg';
@@ -15,21 +13,9 @@ import postgresqlIcon from '../static/postgresql.svg';
 import githubIcon from '../static/github.svg';
 import skillsIcon from '../static/skills.svg';
 
-
 const fast = { tension: 1200, friction: 40 }
 const slow = { mass: 10, tension: 200, friction: 50 }
 const trans = (x, y) => `translate3d(${x}px,${y}px,0) translate3d(-50%,-50%,0)`
-
-// js
-// react
-// redux
-// rails
-// python
-// node
-// mongo
-//postgres
-// github
-
 
 const icons = [
   jsIcon,
@@ -46,14 +32,14 @@ const icons = [
 
 const useStyles = makeStyles((theme) => ({
   icon: {
-    
+    borderRadius: 10,
     position: 'absolute',
     willChange: 'transform',
     boxShadow: '10px 10px 5px 0px rgba(0, 0, 0, 0.75)',
     border: '5px solid black',
     backgroundColor: 'black',
-    width: 200,
-    height: 200,
+    width: 110,
+    height: 110,
   }
 }));
 

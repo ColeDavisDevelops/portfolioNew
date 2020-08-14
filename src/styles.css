@@ -1,3 +1,5 @@
+
+
 .hooks-main > div::after {
   content: '';
   position: absolute;
@@ -23,9 +25,27 @@
 }
 
 .hooks-main {
+  z-index: -1;
+  animation: colorchange 5s infinite; 
   position: absolute;
   width: 100%;
   height: 100%;
-  filter: url('#goo');
   overflow: hidden;
+}
+
+@keyframes colorchange
+{
+  0%   {background: #f3ecda;}
+  25%  {background: #d3efe3;}
+  50%  {background: #dbd7f7;}
+  75%  {background: #f1d7d9;}
+  100% {background: #f3ecda;}
+}
+@-webkit-keyframes colorchange
+{
+  0%   {background: #f3ecda;}
+  25%  {background: #d3efe3;}
+  50%  {background: #dbd7f7;}
+  75%  {background: #f1d7d9;}
+  100% {background: #f3ecda;}
 }

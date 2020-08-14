@@ -8,9 +8,13 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/">
-          <Home/>
-        </Route>
+        <Route 
+          exact
+          path="/"
+          render={routeProps => (
+            <Home {...routeProps} />
+          )}
+        />
         <Route exact path="/projects">
           <Projects/>
         </Route>
