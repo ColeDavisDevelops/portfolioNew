@@ -1,7 +1,6 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import Main from './container/Main';
 import Home from './container/Home';
-import Projects from './container/Projects';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 const App = () => {
@@ -15,8 +14,8 @@ const App = () => {
             <Home {...routeProps} />
           )}
         />
-        <Route exact path="/projects">
-          <Projects/>
+        <Route exact path="/main">
+          <Main/>
         </Route>
       </Switch>
     </BrowserRouter>

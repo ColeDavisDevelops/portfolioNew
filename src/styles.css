@@ -49,3 +49,22 @@
   75%  {background: #f1d7d9;}
   100% {background: #f3ecda;}
 }
+
+.card {
+  margin: auto;
+  border-radius: 50%;
+  width: 35ch;
+  height: 35ch;
+  background: grey;
+  background-image: url(https://avatars0.githubusercontent.com/u/57429854?s=460&u=453541e8f95a85e84b2cbf68124e0ad95d8f3a5c&v=4);
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s;
+  will-change: transform;
+  border: 2px solid black;
+}
+
+.card:hover {
+  box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+}

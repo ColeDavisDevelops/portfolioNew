@@ -48,13 +48,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Home = (props) => {
-  const [toggle, set] = useState(false);
-  const transitions = useTransition(toggle, null, {
-    from: { position: 'absolute', opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-  });
-
   const classes = useStyles();
   return (
     <Grid id="home" className={classes.container} container>

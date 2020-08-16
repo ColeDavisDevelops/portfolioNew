@@ -6,17 +6,20 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import reactIcon from '../static/react.svg';
 
-
 const ProjectCard = (props) => {
 
   const useStyles = makeStyles((theme) => ({
     card: {
+      [theme.breakpoints.up('xl')] : {
+        minHeight: 850,
+        maxHeight: 850,
+        maxWidth: 500,
+      },
       backgroundColor: props.backgroundColor,
       padding: 20,
       border: '5px solid black',
       borderRadius: 10,
       cursor: 'pointer',
-      willChange: 'transform, opacity',
       backgroundSize: 'cover'
     },
     title: { 
@@ -25,12 +28,12 @@ const ProjectCard = (props) => {
       fontWeight: 'bold'
     },
     projectGif: {
-      width: '100%'
+      width: '100%',
+      maxHeight: '90%'
     },
     image: {
-      width: 65,
-      height: 65,
-      margin: 10
+      width: '100%',
+      margin: 'auto',
     },
     description: {
       paddingBottom: 20
@@ -66,13 +69,11 @@ const ProjectCard = (props) => {
                 {props.title}
               </Typography>
             </Grid>
-            <Grid xs={12}>
-              <div style={{width: '100%', margin: 'auto'}} >
-                {props.stack.map(svg => <img className={classes.image} src={svg} />)}
-              </div>
+            <Grid item container xs={12}>
+              {props.stack.map(svg => <Grid style={{display: 'block'}} item xs={3}><img className={classes.image} src={svg} /></Grid>)}
             </Grid>
             <Divider variant="fullWidth" style={{background: 'black', marginTop: 10, marginBottom: 10}} />
-            <Grid xs={12}>
+            <Grid item xs={12}>
               <Typography style={{color: 'black'}} variant="h4">
                 Situation
               </Typography>
@@ -80,7 +81,7 @@ const ProjectCard = (props) => {
                 {props.description}
               </Typography>
             </Grid>
-            <Grid xs={12}>
+            <Grid item xs={12}>
               <Typography style={{color: 'black'}} variant="h4">
                 Action
               </Typography>
@@ -88,7 +89,7 @@ const ProjectCard = (props) => {
                 {props.description}
               </Typography>
             </Grid>
-            <Grid xs={12}>
+            <Grid item xs={12}>
               <Typography style={{color: 'black'}} variant="h4">
                 Result
               </Typography>
