@@ -2,6 +2,8 @@ import React from 'react';
 import Main from './container/Main';
 import Home from './container/Home';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = () => {
   return (
