@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 const Projects = () => {
   const classes = useStyles();
   return (
-    <Grid className={classes.workContainer} container item xs={12} >
+    <>
       <Grid style={{padding: 10}} item xs={12} md={6} xl={3}>
         <ProjectCard
           title={'StonkKings'} 
@@ -64,7 +64,7 @@ const Projects = () => {
           description={"lorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem loremlorem lorem lorem"}
         />
       </Grid>
-    </Grid>
+    </>
   )
 }
 

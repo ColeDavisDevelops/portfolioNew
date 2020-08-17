@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import {useTransition, animated} from 'react-spring'
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import Button from '@material-ui/core/Button';
 import mediumIcon from '../static/mediumIcon.svg';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
@@ -17,20 +22,43 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
+    [theme.breakpoints.up('xl')]: {
+      fontSize: 50 
+    },
+    fontSize: 20,
     flexGrow: 1,
-    fontWeight: 'bold',
-    fontSize: 60,
-    padding: 20
+    fontWeight: 'bolder',
+    padding: 10
+
   },
+  listItem: {
+    border: '1px solid black'
+  },
+  menuIcon: {
+    color: 'black',
+    [theme.breakpoints.up('xl')]: {
+      width: 50,
+      height: 50 
+    },
+    width: 20,
+    height: 20 
+  },
+  listItemText: {
+    '.MuiListItemText-primary': {
+      fontSize: 100
+    }
+  }, 
   icon: {
+    color: 'black',
+    padding: 10,
     height: 45,
     width: 45,
-    marginLeft: 20
   },
   LinkedInIcon: {
+    padding: 5,
+    color: 'black',
     height: 55,
     width: 55,
-    marginLeft: 20 
   },
   smiley: {
     position: 'absolute',
@@ -40,35 +68,36 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Navbar = () => {
-  const [toggle, set] = useState(true)
-  const transitions = useTransition(toggle, null, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-  });
-  
-  useEffect(() => {
-    console.log("update")
-    const interval = setInterval(() => set(!toggle), 5000);
-    return () => clearInterval(interval);
-  })
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
 
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h4" className={classes.title}>
-            {'Cole Davis'}
+          <Typography className={classes.title}>
+            {'<Cole Davis />'}
           </Typography>
-          {transitions.map(({ item, key, props }) => 
-          item
-            ? <animated.div className={classes.smiley} style={{from: props.from, enter: props.enter, leave: props.leave}}>😄</animated.div>
-            : <animated.div className={classes.smiley} style={{from: props.from, enter: props.enter, leave: props.leave}}>🤪</animated.div>
-          )}
-          <GitHubIcon className={classes.icon} />
-          <LinkedInIcon className={classes.LinkedInIcon} />
-          <img className={classes.icon} alt="medium icon" src={mediumIcon} />
+          <IconButton edge="start">
+            <MenuIcon className={classes.menuIcon} onClick={() => setDrawerOpen(!drawerOpen)}/>
+          </IconButton>
+          <SwipeableDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} anchor='top'>
+            <List style={{padding: 0}}>
+              <ListItem className={classes.listItem} button key={"Github"}>
+                <ListItemIcon><GitHubIcon className={classes.icon} /></ListItemIcon>
+                <ListItemText className={classes.listItemText} primary={"Github"} />
+              </ListItem>
+              <ListItem className={classes.listItem} button key={"LinkedIn"}>
+                <ListItemIcon><LinkedInIcon className={classes.LinkedInIcon} /></ListItemIcon>
+                <ListItemText className={classes.listItemText} primary={"LinkedIn"} />
+              </ListItem>
+              <ListItem className={classes.listItem} button key={"Medium"}>
+                <ListItemIcon><img className={classes.icon} alt="medium icon" src={mediumIcon} /></ListItemIcon>
+                <ListItemText className={classes.listItemText} primary={"Medium"} />
+              </ListItem>
+            </List>
+          </SwipeableDrawer>
         </Toolbar>
       </AppBar>
     </div>
