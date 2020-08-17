@@ -33,6 +33,7 @@ const MoreProjects = () => {
         description={'II am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codes am a problem solver who codes'}
       />
       <ProjectCardSecondary 
+        last={true}
         title={"Workout Assistant"}
         icons={[railsIcon, "https://image.flaticon.com/icons/svg/29/29165.svg"]}
         image={'https://im2.ezgif.com/tmp/ezgif-2-f0602360f698.gif'}

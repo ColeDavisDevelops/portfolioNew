@@ -1,6 +1,7 @@
 import React from 'react';
 import Projects from './Projects';
 import MoreProjects from './MoreProjects';
+import About from '../components/About';
 import Blogs from './Blogs'
 import Avatar from '../components/Avatar';
 import NavBar from '../components/Navbar';
@@ -56,6 +57,8 @@ const Main = () => {
         <Grid item xs={12}>
           <Blogs />
         </Grid>
+        <Divider className={classes.divider} variant="middle" />
+        <About />
       </Grid>
     </Grid>
   )
