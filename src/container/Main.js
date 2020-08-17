@@ -1,5 +1,6 @@
 import React from 'react';
 import Projects from './Projects';
+import ProjectCardSecondary from '../components/ProjectCardSecondary';
 import Avatar from '../components/Avatar';
 import NavBar from '../components/Navbar';
 import { makeStyles } from '@material-ui/core/styles';
@@ -27,7 +28,6 @@ const useStyles = makeStyles(theme => ({
   moreProjects: {
     padding: 20
   }
-
 }));
 
 const Main = () => {
@@ -52,24 +52,24 @@ const Main = () => {
       </Grid>
       <Divider className={classes.divider} variant="middle" />
       <Grid className={classes.workContainer} item xs={12}>
-        <Typography style={{fontWeight: 'bold'}} variant="h3" align="center">
+        <Typography style={{fontWeight: 'bold', marginBottom: 20}} variant="h3" align="center">
           More Projects
         </Typography>
-        <Typography variant="h4" align="left">
-          Playlister 
-        </Typography>
-        <Typography variant="h6" align="left">
-          I am a problem solver who codes 
-        </Typography>
-        <Typography variant="h6" align="left">
-          I am a problem solver who codes 
-        </Typography>
-        <Typography variant="h6" align="left">
-          I am a problem solver who codes 
-        </Typography>
-        <Typography variant="h6" align="left">
-          I am a problem solver who codes 
-        </Typography>
+        <ProjectCardSecondary 
+          title={"Playlister"}
+          image={'https://im2.ezgif.com/tmp/ezgif-2-7ce5c67ef82d.gif'}
+          description={'II am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codes am a problem solver who codes'}
+        />
+        <ProjectCardSecondary 
+          title={"Not Reddit"}
+          image={'https://im2.ezgif.com/tmp/ezgif-2-e9e6c4f98b2e.gif'}
+          description={'II am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codes am a problem solver who codes'}
+        />
+        <ProjectCardSecondary 
+          title={"Workout Assistant"}
+          image={'https://im2.ezgif.com/tmp/ezgif-2-f0602360f698.gif'}
+          description={'II am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codes am a problem solver who codes'}
+        />
       </Grid>
     </Grid>
   )
