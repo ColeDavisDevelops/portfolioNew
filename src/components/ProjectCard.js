@@ -11,9 +11,9 @@ const ProjectCard = (props) => {
   const useStyles = makeStyles((theme) => ({
     card: {
       [theme.breakpoints.up('xl')] : {
-        minHeight: 850,
-        maxHeight: 850,
-        maxWidth: 500,
+        minHeight: 900,
+        maxHeight: 900,
+        maxWidth: 450,
       },
       backgroundColor: props.backgroundColor,
       padding: 20,
@@ -75,26 +75,18 @@ const ProjectCard = (props) => {
             <Divider variant="fullWidth" style={{background: 'black', marginTop: 10, marginBottom: 10}} />
             <Grid item xs={12}>
               <Typography style={{color: 'black'}} variant="h4">
-                Situation
+                Problem
               </Typography>
-              <Typography className={classes.description} style={{color: 'black'}} variant="h6">
-                {props.description}
-              </Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography style={{color: 'black'}} variant="h4">
-                Action
-              </Typography>
-              <Typography className={classes.description} style={{color: 'black'}} variant="h6">
-                {props.description}
+              <Typography className={classes.description} style={{color: 'black'}} variant="body1">
+                {props.problem}
               </Typography>
             </Grid>
             <Grid item xs={12}>
               <Typography style={{color: 'black'}} variant="h4">
-                Result
+                Solution
               </Typography>
-              <Typography className={classes.description} style={{color: 'black'}} variant="h6">
-                {props.description}
+              <Typography className={classes.description} style={{color: 'black'}} variant="body1">
+                {props.solution}
               </Typography>
             </Grid>
             <Grid item xs={12}>
