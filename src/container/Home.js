@@ -11,18 +11,27 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles((theme) => ({
   container: {
     width: '100%',
+    backgroundColor: 'black'
   },
   title: {
+    display: 'relative',
+    padding: 20,
     position: 'absolute',
     borderRadius: 10,
-    backgroundColor: 'lightgreen',
     border: '5px solid black',
     textAlign: 'center',
-    top: '20%',
-    left: '20%',
-    fontSize: 100,
-    fontWeight: 'bold',
-    width: '60%',
+    top: '40%',
+    [theme.breakpoints.down('md')]: {
+      left: '10%',
+      width: '80%',
+      height: '13%'
+    },
+    [theme.breakpoints.up('md')]: {
+      left: '30%',
+      width: '40%',
+      maxHeight: 100,
+      minHeight: 100 
+    }
   },
   buttonContainer: {
     zIndex: 2,
@@ -34,13 +43,13 @@ const useStyles = makeStyles((theme) => ({
     left: '30%'
   },
   button: {
+    border: 'none',
     '&:hover': {
       backgroundColor: '#dbd7f7',
     },
-    border: '5px solid black',
-    height: '100%',
     fontWeight: 'bold',
-    fontSize: 20
+    fontSize: 20, 
+    bottom: 0
   },
   projects: {
     margin: 'auto'
@@ -50,15 +59,15 @@ const useStyles = makeStyles((theme) => ({
 const Home = (props) => {
   const classes = useStyles();
   return (
-    <Grid id="home" className={classes.container} container>
-      <Grid className={classes.title} item xs={12}>
-        <Wave text="Hi, I'm Cole!" effect="stretch" effectChange={1.5} />
-      </Grid>
-      <Grid className={classes.buttonContainer} item xs={12}>
-        <Button onClick={() => props.history.push('/projects')} className={classes.button} fullWidth variant="outlined">
+    <Grid className={classes.container} container>
+      <div id="home" class={classes.title}>
+        <Typography style={{fontWeight: 'bold'}} variant="h6" align="center">
+          Hi, I am Cole.
+        </Typography>
+        <Button onClick={() => props.history.push('/main')} className={classes.button} fullWidth variant="outlined">
           Enter
         </Button>
-      </Grid>
+      </div>
       <Grid item xs={12} className={classes.projects}>
         <MouseChaser />
       </Grid>
