@@ -13,9 +13,7 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.up('lg')]: {
       marginBottom: 20,
-      
     }
-
   },
   title: {
     fontWeight: 'bold',
@@ -43,7 +41,7 @@ const useStyles = makeStyles(theme => ({
   description: {
     [theme.breakpoints.down('lg')]: {
       fontSize: 15 ,
-      textAlign: 'center'
+      textAlign: 'justify'
     }
   },
   icon: {
@@ -63,7 +61,7 @@ const useStyles = makeStyles(theme => ({
       width: '100%',
       
     },
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up('xl')]: {
       marginTop: 100,
       width: '50%',
       margin: 'auto',
@@ -104,10 +102,10 @@ const ProjectCardSecondary = (props) => {
           </Typography>
         </Grid>
         <Grid className={classes.buttonBox} item container xs={12}>
-          <Button className={classes.button} variant="outlined">
+          <Button className={classes.button} target="_blank" href={props.github} variant="outlined">
             Github
           </Button>
-          <Button className={classes.button} variant="outlined">
+          <Button className={classes.button} target="_blank" href={props.demo} variant="outlined">
             Demo
           </Button>
         </Grid>

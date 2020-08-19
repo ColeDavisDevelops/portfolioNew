@@ -32,6 +32,8 @@ const MoreProjects = () => {
           Playlister is a platform that allows users to create their own playlist and share it with the world! Users can vote on which playlist they think is best and sort playlists by popularity. 
           Created using the YouTube API, Ruby and Rails for object relational mapping, JWT for user authentication, PostgreSQL for data storage and React Bootstrap for styling.
         `}
+        github={'https://github.com/Colebuildanddevelop/mod4-project'}
+        demo={'https://www.youtube.com/watch?v=DjTKA2AZJ0M'}
       />
       <ProjectCardSecondary 
         title={"Not Reddit"}
@@ -42,17 +44,21 @@ const MoreProjects = () => {
           Users can like and comment on posts as well as sort posts by popularity. NotReddit was created using a Rails backend for ORM, embedded ruby for the frontend and MySQL for data
           persistence.  
         `}
+        github={'https://github.com/Colebuildanddevelop/Mod2-project'}
+        demo={'https://www.youtube.com/watch?v=DjTKA2AZJ0M'}
       />
       <ProjectCardSecondary 
         last={true}
-        title={"Workout Assistant"}
+        title={"The Efficient Workout"}
         icons={[railsIcon, "https://image.flaticon.com/icons/svg/29/29165.svg"]}
         image={cliGif}
         description={`
-          Workout Assistant is a command line interface that allows users to record 
+          The Efficient Workout is a command line interface that allows users to record 
           information about their workouts, search through various listed trainers as well as be suggested a trainer based 
           on their workout preferences.
         `}
+        github={'https://github.com/Colebuildanddevelop/thach_cole_project'}
+        demo={'https://www.youtube.com/watch?v=ufxFC39xr70'}
       />
     </>
   )

@@ -5,6 +5,7 @@ import About from '../components/About';
 import Blogs from './Blogs'
 import Avatar from '../components/Avatar';
 import NavBar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -12,11 +13,19 @@ import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles(theme => ({
   workContainer: {
-    [theme.breakpoints.up('xl')]: {
+    [theme.breakpoints.up('lg')]: {
       paddingLeft: 100, 
-      paddingRight: 100
+      paddingRight: 100,
+      maxWidth: 1920
     },
-    maxWidth: '100%', 
+    [theme.breakpoints.between('md', 'lg')]: {
+      paddingLeft: 100, 
+      paddingRight: 100,
+      maxWidth: 965 
+    },
+    [theme.breakpoints.down('md')]: {
+      width: '100%'
+    },
     margin: 'auto'
   },
   divider: {
@@ -59,6 +68,8 @@ const Main = () => {
         </Grid>
         <Divider className={classes.divider} variant="middle" />
         <About />
+        <Divider className={classes.divider} variant="middle" />
+        <Footer />
       </Grid>
     </Grid>
   )

@@ -3,7 +3,14 @@ import Carousel from 'react-bootstrap/Carousel';
 import Typography from '@material-ui/core/Typography';
 
 const Blogs = () => {
-
+  const classes = {
+    image: {
+      maxWidth: 300,
+      maxHeight: 300,
+      margin: 'auto',
+      marginBottom: 200
+    }
+  }
   return (
     <>
       <style type="text/css">
@@ -17,9 +24,20 @@ const Blogs = () => {
         .carousel-indicators li {
           background-color: black;
         }
+        .carousel-caption {
+          position: relative;
+          left: 0;
+          top: 0;
+        }
+        .image {
+          max-width: 300px;
+          max-height: 300px;
+          margin: auto;
+          
+        }
         `}
       </style>
-      <Typography style={{width: '100%', fontWeight: 'bold', marginBottom: 20}} variant="h3" align="center">
+      <Typography style={{width: '100%', fontWeight: 'bold', marginBottom: 20, textDecoration: 'underline'}} variant="h3" align="center">
         Blogs
       </Typography>
       <Carousel 
@@ -27,8 +45,7 @@ const Blogs = () => {
       >
         <Carousel.Item>
           <img
-            style={{maxWidth: 300, maxHeight: 300, margin: 'auto', marginBottom: 200}}
-            className="d-block w-100"
+            className="d-block w-100 image"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/PokerStars_emblem.svg/1200px-PokerStars_emblem.svg.png"
             alt="Poker"
           />
@@ -39,8 +56,7 @@ const Blogs = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            style={{maxWidth: 300, maxHeight: 300, margin: 'auto', marginBottom: 200}}
-            className="d-block w-100"
+            className="d-block w-100 image"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Icon-Vim.svg/768px-Icon-Vim.svg.png"
             alt="Vim"
           />
@@ -51,8 +67,7 @@ const Blogs = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            style={{maxWidth: 300, maxHeight: 300, margin: 'auto', marginBottom: 200}}
-            className="d-block w-100"
+            className="d-block w-100 image"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/2-generals.svg/440px-2-generals.svg.png"
             alt="Two Generals"
           />
@@ -63,8 +78,7 @@ const Blogs = () => {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            style={{maxWidth: 300, maxHeight: 300, margin: 'auto', marginBottom: 200}}
-            className="d-block w-100"
+            className="d-block w-100 image"
             src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
             alt="Node Js"
           />
