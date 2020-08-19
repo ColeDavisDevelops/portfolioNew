@@ -43,6 +43,8 @@ const Projects = () => {
             This allows new traders to compete against a known player pool for an arbitrarily small sum of money. 
           `
           }
+          website={"https://stonk-kings.herokuapp.com/"}
+          github={"https://github.com/Colebuildanddevelop/TKings"}
         />
       </Grid>
       <Grid style={{padding: 10}} item xs={12} md={6} xl={3}>
@@ -64,6 +66,8 @@ const Projects = () => {
             alive experience.
           `
           }
+          website={"https://friendswithvids.firebaseapp.com/"}
+          github={"https://github.com/Colebuildanddevelop/friendswithvids"}
         />
       </Grid>
       <Grid style={{padding: 10}} item xs={12} md={6} xl={3}>
@@ -73,16 +77,16 @@ const Projects = () => {
           image={'https://raw.githubusercontent.com/Colebuildanddevelop/Portfolio/master/src/predictChoseGame.gif'}
           stack={[reactIcon, 'https://cdn-images-1.medium.com/max/400/1*uFuRJ8osF_ma0FF7Un1cag.png', 'https://png2.cleanpng.com/sh/9e4541df87ed738598d43310ee84947e/L0KzQYm3VME4N6dxiZH0aYP2gLBuTfZqepZneeVuLXPvf8brTf1me6Rmf9t3Zz3mf773lgRmel5ue9H3cz3qf7FujPUua510RdlydHj4cn68gfQ2bGRofaZvY0S5QHA7V8MxO2Q5TKMAMkO8RoOBU8A0Omc8RuJ3Zx==/kisspng-firebase-cloud-messaging-computer-icons-google-clo-github-5ad5d3ce4fc460.4730334415239628303267.png', 'https://material-ui.com/static/logo.png']}
           problem={
-            `New stock traders are faced with high barriers to entry. Due to SEC requirements, one needs atleast $25,000 to start 
-            day trading. Furthermore new traders are forced to compete versus an unknown player pool consisting of
-            the worlds best traders and strategies.`
+            `PredictBr aims to solve the same problem that Stonk Kings solves. Reduce barriers to entry for new traders and create a new paradigm of competition.`
           }
           solution={
-            `Users create tournaments varying in entry fees, entry limits, and durations. Upon entering a tournament, users are granted a simulated trading account where 
-            they are free to make simulated trades. When the tournament concludes, the user with the highest simulated balance is granted all the entry fees accumulated from that tournament.
-            This allows new traders to compete against a known player pool for an arbitrarily small sum of money. 
-          `
+            `All tournaments game state and user funds are handled by solidity code I wrote hosted on Ethereum. This decentralized backend results in pure transparency for users. 
+             The aim of the competetion is to predict the closing price of the given asset at the end of a given duration. Once a tournaemnt has started predictions are no longer accepted. To make a prediction users must pay an associated fee.
+             Users can make as many predicions as they please before the tournament starts. When the tournament concludes, the user with the closest prediction to the assets price at that time will be awarded the accumulated fees from all user predictions. 
+            `
           }
+          website={"https://valueisright.firebaseapp.com/"}
+          github={"https://github.com/Colebuildanddevelop/PredictBr"}
         />
       </Grid>
       <Grid style={{padding: 10}} item xs={12} md={6} xl={3}>
@@ -93,16 +97,15 @@ const Projects = () => {
           image={'https://raw.githubusercontent.com/Colebuildanddevelop/Portfolio/master/src/StupidShirtsAddingItems.gif'}
           stack={[reactIcon, reduxIcon, 'https://png2.cleanpng.com/sh/9e4541df87ed738598d43310ee84947e/L0KzQYm3VME4N6dxiZH0aYP2gLBuTfZqepZneeVuLXPvf8brTf1me6Rmf9t3Zz3mf773lgRmel5ue9H3cz3qf7FujPUua510RdlydHj4cn68gfQ2bGRofaZvY0S5QHA7V8MxO2Q5TKMAMkO8RoOBU8A0Omc8RuJ3Zx==/kisspng-firebase-cloud-messaging-computer-icons-google-clo-github-5ad5d3ce4fc460.4730334415239628303267.png', 'https://material-ui.com/static/logo.png']}
           problem={
-            `New stock traders are faced with high barriers to entry. Due to SEC requirements, one needs atleast $25,000 to start 
-            day trading. Furthermore new traders are forced to compete versus an unknown player pool consisting of
-            the worlds best traders and strategies.`
+            `My first ReactJs project. I wanted to create a store front application that I could use as a template to create multiple online stores for myself and others.`
           }
           solution={
-            `Users create tournaments varying in entry fees, entry limits, and durations. Upon entering a tournament, users are granted a simulated trading account where 
-            they are free to make simulated trades. When the tournament concludes, the user with the highest simulated balance is granted all the entry fees accumulated from that tournament.
-            This allows new traders to compete against a known player pool for an arbitrarily small sum of money. 
+            `Created a custom stripe checkout experience using the stripe API in order to ensure PCI compliance. Used local storage to handle user shopping cart data. 
+            Used redux for central application state management. Styled with material ui. 
           `
           }
+          website={"https://stupid-shirts.firebaseapp.com/"}
+          github={"https://github.com/Colebuildanddevelop/StupidShirts"}
         />
       </Grid>
     </>

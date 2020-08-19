@@ -21,27 +21,38 @@ const MoreProjects = () => {
   const classes = useStyles();
   return (
     <>
-      <Typography style={{width: '100%', fontWeight: 'bold', marginBottom: 20}} variant="h3" align="center">
+      <Typography style={{width: '100%', fontWeight: 'bold', marginBottom: 20, textDecoration: 'underline'}} variant="h3" align="center">
         Group Projects
       </Typography>
       <ProjectCardSecondary 
         title={"Playlister"}
         icons={[reactIcon, railsIcon, bootstrapIcon, postgresqlIcon]}
         image={playlisterGif}
-        description={'I am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codes am a problem solver who codes'}
+        description={`
+          Playlister is a platform that allows users to create their own playlist and share it with the world! Users can vote on which playlist they think is best and sort playlists by popularity. 
+          Created using the YouTube API, Ruby and Rails for object relational mapping, JWT for user authentication, PostgreSQL for data storage and React Bootstrap for styling.
+        `}
       />
       <ProjectCardSecondary 
         title={"Not Reddit"}
         icons={[railsIcon, "https://cdn.iconscout.com/icon/premium/png-512-thumb/erb-file-1931083-1633663.png", "https://image.flaticon.com/icons/svg/29/29165.svg"]}
         image={notRedditGif}
-        description={'II am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codes am a problem solver who codes'}
+        description={`
+          NotReddit is a platform that allows users to make posts in different user created categories, as well as create categories themselves and subscribe to these categories.
+          Users can like and comment on posts as well as sort posts by popularity. NotReddit was created using a Rails backend for ORM, embedded ruby for the frontend and MySQL for data
+          persistence.  
+        `}
       />
       <ProjectCardSecondary 
         last={true}
         title={"Workout Assistant"}
         icons={[railsIcon, "https://image.flaticon.com/icons/svg/29/29165.svg"]}
         image={cliGif}
-        description={'II am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codesI am a problem solver who codes am a problem solver who codes'}
+        description={`
+          Workout Assistant is a command line interface that allows users to record 
+          information about their workouts, search through various listed trainers as well as be suggested a trainer based 
+          on their workout preferences.
+        `}
       />
     </>
   )

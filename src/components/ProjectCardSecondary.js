@@ -6,16 +6,45 @@ import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles(theme => ({
-  title: {
-    fontWeight: 'bold'
+  container: {
+    [theme.breakpoints.down('lg')]: {
+      padding: 10,
+      width: '100%',
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginBottom: 20,
+      
+    }
+
   },
+  title: {
+    fontWeight: 'bold',
+  },
+  imageContainer: {
+  }, 
   image: {
-    border: 'solid 2px black'
+    [theme.breakpoints.down('lg')]: {
+      minWidth: '100%',
+    },
+    width: '90%',
+    
   },
   stackBox: {
-    marginBottom: 20,
+    [theme.breakpoints.down('lg')]: {
+      width: '80%',
+      padding: 10
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginBottom: 20
+    },
     width: '50%',
     margin: 'auto'
+  },
+  description: {
+    [theme.breakpoints.down('lg')]: {
+      fontSize: 15 ,
+      textAlign: 'center'
+    }
   },
   icon: {
     width: '20%',
@@ -29,14 +58,22 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 20,
     backgroundColor: 'lightblack'
   },
-
   buttonBox: {
-    width: '50%',
-    margin: 'auto',
-
-    marginTop: 100,
+    [theme.breakpoints.down('lg')]: {
+      width: '100%',
+      
+    },
+    [theme.breakpoints.up('lg')]: {
+      marginTop: 100,
+      width: '50%',
+      margin: 'auto',
+    },
   },
   button: {
+    [theme.breakpoints.down('lg')]: {
+      padding: 10,
+      width: '100%',
+    },
     backgroundColor: 'black',
     color: 'white',
     width: '40%',
@@ -48,13 +85,13 @@ const ProjectCardSecondary = (props) => {
 
   const classes = useStyles();
   return (
-    <Grid style={{marginBottom: 20}} item container xs={12}>
+    <Grid className={classes.container} item container xs={12}>
       <Grid item xs={12}>
         <Typography className={classes.title} variant="h4" align="left">
           {props.title}
         </Typography>
       </Grid>
-      <Grid item xs={12} xl={6}>
+      <Grid className={classes.imageContainer} item xs={12} xl={6}>
         <img className={classes.image} src={props.image} />
       </Grid>
       <Grid item xs={12} xl={6}>
@@ -62,7 +99,7 @@ const ProjectCardSecondary = (props) => {
           {props.icons.map(icon => <img className={classes.icon} src={icon} />)}
         </Grid>
         <Grid item>
-          <Typography variant="h6" align="left">
+          <Typography className={classes.description} variant="h6" align="left">
             {props.description}
           </Typography>
         </Grid>
