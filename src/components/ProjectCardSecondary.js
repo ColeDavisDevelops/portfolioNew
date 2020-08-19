@@ -29,14 +29,12 @@ const useStyles = makeStyles(theme => ({
   },
   stackBox: {
     [theme.breakpoints.down('lg')]: {
-      width: '80%',
       padding: 10
     },
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up('xl')]: {
       marginBottom: 20
     },
-    width: '50%',
-    margin: 'auto'
+    maxHeight: '120px',
   },
   description: {
     [theme.breakpoints.down('lg')]: {
@@ -45,7 +43,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   icon: {
-    width: '20%',
+    width: '12%',
     margin: 'auto'
   },
   divider: {
@@ -59,7 +57,6 @@ const useStyles = makeStyles(theme => ({
   buttonBox: {
     [theme.breakpoints.down('lg')]: {
       width: '100%',
-      
     },
     [theme.breakpoints.up('xl')]: {
       marginTop: 100,
@@ -69,8 +66,9 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     [theme.breakpoints.down('lg')]: {
-      padding: 10,
       width: '100%',
+      marginLeft: 0,
+      marginRight: 0
     },
     backgroundColor: 'black',
     color: 'white',
