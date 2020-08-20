@@ -19,9 +19,7 @@ const useStyles = makeStyles(theme => ({
       maxWidth: 1920
     },
     [theme.breakpoints.between('md', 'lg')]: {
-      paddingLeft: 100, 
-      paddingRight: 100,
-      maxWidth: 965 
+      maxWidth: 1200 
     },
     [theme.breakpoints.down('md')]: {
       width: '100%'

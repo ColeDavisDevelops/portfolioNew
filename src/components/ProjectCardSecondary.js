@@ -45,7 +45,10 @@ const useStyles = makeStyles(theme => ({
     }
   },
   icon: {
-    width: '12%',
+    [theme.breakpoints.down('sm')]: {
+      width: '20%'
+    },
+    width: '15%',
     margin: 'auto'
   },
   divider: {

@@ -11,11 +11,12 @@ const ProjectCard = (props) => {
   const useStyles = makeStyles((theme) => ({
     card: {
       [theme.breakpoints.up('xl')] : {
-        minHeight: 900,
         maxHeight: 900,
       },
-      maxWidth: 450,
-      minHeight: 775,
+      margin: 'auto',
+      maxWidth: 420,
+      minWidth: 420,
+      minHeight: 900,
       backgroundColor: props.backgroundColor,
       padding: 20,
       border: '5px solid black',
