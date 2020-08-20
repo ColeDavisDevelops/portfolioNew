@@ -35,10 +35,12 @@ const useStyles = makeStyles(theme => ({
       marginBottom: 20
     },
     maxHeight: '120px',
+    width: '60%',
+    margin: 'auto'
   },
   description: {
     [theme.breakpoints.down('lg')]: {
-      fontSize: 15 ,
+      fontSize: 15, 
       textAlign: 'justify'
     }
   },

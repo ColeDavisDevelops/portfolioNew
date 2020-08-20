@@ -23,7 +23,7 @@ const Footer = () => {
     <React.Fragment>
       {/* Footer */}
       <footer className={classes.footer}>
-        <Typography variant="h3" align="center">
+        <Typography style={{textDecoration: 'underline'}} variant="h3" align="center">
           Contact
         </Typography>
         <Typography variant="h6" align="center" color="textSecondary" component="p" >

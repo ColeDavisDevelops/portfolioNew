@@ -33,7 +33,7 @@ const MoreProjects = () => {
           Created using the YouTube API, Ruby and Rails for object relational mapping, JWT for user authentication, PostgreSQL for data storage and React Bootstrap for styling.
         `}
         github={'https://github.com/Colebuildanddevelop/mod4-project'}
-        demo={'https://www.youtube.com/watch?v=DjTKA2AZJ0M'}
+        demo={'https://www.youtube.com/watch?v=4YI3ROmPnB8&feature=youtu.be'}
       />
       <ProjectCardSecondary 
         title={"Not Reddit"}

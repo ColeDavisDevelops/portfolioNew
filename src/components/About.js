@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 
   },
   text: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('lg')]: {
       fontSize: 15 
     }
   }
@@ -38,22 +38,21 @@ const About = () => {
         <Grid container item>
           <Grid item xs={12}>
             <Typography className={classes.question} align="left" variant="h5">
-              Why I code:
+              Why I code
             </Typography>
           </Grid>
           <Grid item xs={12}>
             <Typography className={classes.text} align="left" variant="h6">
-              I have always been in search of a proffession that I found would be worth spending a liftetime on. 
-              To me, this is something that would offer endless growth potential while also creating things that add value to peoples lives. 
-              For a long time I wanted to be a proffessional investor and trader. I would spend every trading day 
-              watching futures contract price action and studying any strategy I could. What I loved most about trading 
-              was the complexity that came with markets and finding profitable strategies. From 2017 to 2019 I transitioned to
-              playing poker professionally. In addition to risk management and creativity, poker and trading demand extreme levels of emotional 
-              resilience and I have carried that with me trough my programming journey. Where poker and trading ultimately came up short was due 
-              to the sole focus on stealing value. I felt my energy could be better spent than competing in zero sum games. In early 2019 I 
-              decided to pursue a career in technology with hopes to actually create value. I soon found a foot in the industry as a information technology 
-              support specialist. Now my time is spent focusing solely on software engineering. Software engineering and operation science 
-              offer infinite possibilities, growth and learning well worthy of spening a lifetime on. 
+              For my personal well being I find it essential to be laser focused on improving or striving for something. 
+              For a long time I wanted to be a professional investor and trader. What I loved most about trading 
+              was the complexity that came with markets and finding profitable strategies. In 2017 I transitioned to
+              playing poker professionally where I eventually stopped in 2019. Poker and trading ultimately came up short due 
+              to their zero sum nature. With hopes of creating value I 
+              decided to pursue a career in technology. I soon found a foot in the industry as an information technology 
+              support specialist in early 2019. After six or so months I found more direction and since then my time has been spent focused solely on software engineering.
+              What I love most about software engineering is the amount of things there are to learn and build. Exercising my coding knowledge and growing as 
+              a programmer is truly fulfilling work and there will never be a point where I will run out of things to learn or do. For this reason 
+              I find programming to be the best way to spend the rest of my life.     
             </Typography>
           </Grid>
         </Grid>
