@@ -24,14 +24,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       left: '10%',
       width: '80%',
-      height: '13%'
     },
     [theme.breakpoints.up('md')]: {
       left: '30%',
       width: '40%',
-      maxHeight: 100,
-      minHeight: 100 
-    }
+    },
+    maxHeight: 120,
+    minHeight: 120  
   },
   buttonContainer: {
     zIndex: 2,
@@ -49,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
     },
     fontWeight: 'bold',
     fontSize: 20, 
-    bottom: 0
   },
   projects: {
     margin: 'auto'
