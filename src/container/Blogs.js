@@ -4,15 +4,12 @@ import Typography from '@material-ui/core/Typography';
 
 const Blogs = () => {
   const classes = {
-    image: {
-      maxWidth: 300,
-      maxHeight: 300,
-      margin: 'auto',
-      marginBottom: 200
+    container: {
+      minHeight: 500
     }
   }
   return (
-    <>
+    <div style={classes.container}>
       <style type="text/css">
         {`
         .carousel-control-prev-icon {
@@ -33,6 +30,8 @@ const Blogs = () => {
           max-width: 300px;
           max-height: 300px;
           margin: auto;
+          minWidth: 300;
+          minHeight: 300;
           
         }
         `}
@@ -88,7 +87,7 @@ const Blogs = () => {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-    </>
+    </div>
   )
 }
 

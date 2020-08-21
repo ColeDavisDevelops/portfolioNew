@@ -10,19 +10,27 @@ const ProjectCard = (props) => {
 
   const useStyles = makeStyles((theme) => ({
     card: {
-      [theme.breakpoints.up('xl')] : {
-        maxHeight: 900,
+      [theme.breakpoints.up('md')] : {
+        maxHeight: 950,
+        minWidth: 420,
+        maxWidth: 420,
+        minHeight: 950,
+        padding: 20,
       },
+      padding: 10,
       margin: 'auto',
-      maxWidth: 420,
-      minWidth: 420,
-      minHeight: 900,
       backgroundColor: props.backgroundColor,
-      padding: 20,
       border: '5px solid black',
       borderRadius: 10,
       cursor: 'pointer',
       backgroundSize: 'cover'
+    },
+    infoButton: {
+      marginTop: 10,
+      fontSize: 20,
+      backgroundColor: props.backgroundColor,
+      fontWeight: 'bolder',
+      color: props.color ? props.color : 'black',
     },
     title: { 
       paddingBottom: 10,    
@@ -62,6 +70,9 @@ const ProjectCard = (props) => {
             {props.title}
           </Typography>
           <img className={classes.projectGif} src={props.image}/>
+          <Button className={classes.infoButton} onClick={() => setShowInfo(true)} fullWidth>
+            click for more
+          </Button>
         </div>
       ) : (
         <Grid style={{backgroundColor: 'white', display: 'flex'}} className={classes.card} container direction="column">

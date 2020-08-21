@@ -28,14 +28,25 @@ const useStyles = makeStyles(theme => ({
     
   },
   stackBox: {
-    [theme.breakpoints.down('lg')]: {
-      padding: 10
-    },
     [theme.breakpoints.up('xl')]: {
       marginBottom: 20
     },
+    [theme.breakpoints.between('md', 'lg')]: {
+      padding: 10,
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: 10,
+      width: '90%'
+    },
     maxHeight: '120px',
     width: '60%',
+    margin: 'auto'
+  },
+  icon: {
+    [theme.breakpoints.down('sm')]: {
+      width: 60 
+    },
+    width: '15%',
     margin: 'auto'
   },
   description: {
@@ -43,13 +54,6 @@ const useStyles = makeStyles(theme => ({
       fontSize: 15, 
       textAlign: 'justify'
     }
-  },
-  icon: {
-    [theme.breakpoints.down('sm')]: {
-      width: '20%'
-    },
-    width: '15%',
-    margin: 'auto'
   },
   divider: {
     margin: 'auto',
