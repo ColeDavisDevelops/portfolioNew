@@ -70,7 +70,6 @@ const useStyles = makeStyles((theme) => ({
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-
   const classes = useStyles();
   return (
     <div className={classes.root}>
