@@ -11,6 +11,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import DescriptionIcon from '@material-ui/icons/Description';
 import mediumIcon from '../static/mediumIcon.svg';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
@@ -82,6 +83,10 @@ const Navbar = () => {
           </IconButton>
           <SwipeableDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} anchor='right'>
             <List style={{padding: 0}}>
+              <ListItem className={classes.listItem} component="a" target='_blank' href='https://docs.google.com/document/d/e/2PACX-1vRSJk-NgIjoBdFVykocdBlveWbxkQXhaKooxzKdoRt2mgg-A6FHMzHCQFn0AuaErXZcDFLHMfMW__8M/pub' button key={"Github"}>
+                <ListItemIcon><DescriptionIcon className={classes.icon} /></ListItemIcon>
+                <ListItemText classes={{primary: classes.listItemText}}  primary={"Resume"} />
+              </ListItem>
               <ListItem className={classes.listItem} component="a" target='_blank' href='https://github.com/Colebuildanddevelop' button key={"Github"}>
                 <ListItemIcon><GitHubIcon className={classes.icon} /></ListItemIcon>
                 <ListItemText classes={{primary: classes.listItemText}}  primary={"Github"} />

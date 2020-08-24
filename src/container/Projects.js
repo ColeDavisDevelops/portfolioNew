@@ -29,6 +29,7 @@ const Projects = () => {
       <Grid style={{padding: 10}} item xs={12} md={6} xl={3}>
         <ProjectCard
           title={'StonkKings'} 
+          timeout={250}
           backgroundColor={'#d84315'}
           image={stonkGif}
           stack={[reactIcon, reduxIcon, nodeIcon, mongoIcon]}
@@ -50,6 +51,7 @@ const Projects = () => {
       <Grid style={{padding: 10}} item xs={12} md={6} xl={3}>
         <ProjectCard
           title={'FriendsWithVidz'} 
+          timeout={500}
           backgroundColor={'#673ab7'}
           color={'white'}
           image={'https://raw.githubusercontent.com/Colebuildanddevelop/Portfolio/master/src/fwv.gif'}
@@ -73,6 +75,7 @@ const Projects = () => {
       <Grid style={{padding: 10}} item xs={12} md={6} xl={3}>
         <ProjectCard
           title={'PredictBR'} 
+          timeout={750}
           backgroundColor={'#5ee07d'}
           image={'https://raw.githubusercontent.com/Colebuildanddevelop/Portfolio/master/src/predictChoseGame.gif'}
           stack={[reactIcon, 'https://cdn-images-1.medium.com/max/400/1*uFuRJ8osF_ma0FF7Un1cag.png', 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
@@ -92,6 +95,7 @@ const Projects = () => {
       <Grid style={{padding: 10}} item xs={12} md={6} xl={3}>
         <ProjectCard
           title={'StupidShirts'} 
+          timeout={1000}
           backgroundColor={'black'}
           color={'white'}
           image={'https://raw.githubusercontent.com/Colebuildanddevelop/Portfolio/master/src/StupidShirtsAddingItems.gif'}
