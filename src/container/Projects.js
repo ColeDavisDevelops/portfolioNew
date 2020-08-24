@@ -53,7 +53,7 @@ const Projects = () => {
           backgroundColor={'#673ab7'}
           color={'white'}
           image={'https://raw.githubusercontent.com/Colebuildanddevelop/Portfolio/master/src/fwv.gif'}
-          stack={[reactIcon, reduxIcon, 'https://png2.cleanpng.com/sh/9e4541df87ed738598d43310ee84947e/L0KzQYm3VME4N6dxiZH0aYP2gLBuTfZqepZneeVuLXPvf8brTf1me6Rmf9t3Zz3mf773lgRmel5ue9H3cz3qf7FujPUua510RdlydHj4cn68gfQ2bGRofaZvY0S5QHA7V8MxO2Q5TKMAMkO8RoOBU8A0Omc8RuJ3Zx==/kisspng-firebase-cloud-messaging-computer-icons-google-clo-github-5ad5d3ce4fc460.4730334415239628303267.png', 'https://material-ui.com/static/logo.png']}
+          stack={[reactIcon, reduxIcon, 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
           problem={
             `Watching YouTube with friends can be a tedious task when you have to ensure that the video you're watching is synced up with everyone elses. 
             No one wants to be spoiled by their friends video playing five seconds ahead of their own! Also watching YouTube can be a lonely adventure with no live 
@@ -75,7 +75,7 @@ const Projects = () => {
           title={'PredictBR'} 
           backgroundColor={'#5ee07d'}
           image={'https://raw.githubusercontent.com/Colebuildanddevelop/Portfolio/master/src/predictChoseGame.gif'}
-          stack={[reactIcon, 'https://cdn-images-1.medium.com/max/400/1*uFuRJ8osF_ma0FF7Un1cag.png', 'https://png2.cleanpng.com/sh/9e4541df87ed738598d43310ee84947e/L0KzQYm3VME4N6dxiZH0aYP2gLBuTfZqepZneeVuLXPvf8brTf1me6Rmf9t3Zz3mf773lgRmel5ue9H3cz3qf7FujPUua510RdlydHj4cn68gfQ2bGRofaZvY0S5QHA7V8MxO2Q5TKMAMkO8RoOBU8A0Omc8RuJ3Zx==/kisspng-firebase-cloud-messaging-computer-icons-google-clo-github-5ad5d3ce4fc460.4730334415239628303267.png', 'https://material-ui.com/static/logo.png']}
+          stack={[reactIcon, 'https://cdn-images-1.medium.com/max/400/1*uFuRJ8osF_ma0FF7Un1cag.png', 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
           problem={
             `PredictBr aims to solve the same problem that Stonk Kings solves. Reduce barriers to entry for new traders and create a new paradigm of competition.`
           }
@@ -95,7 +95,7 @@ const Projects = () => {
           backgroundColor={'black'}
           color={'white'}
           image={'https://raw.githubusercontent.com/Colebuildanddevelop/Portfolio/master/src/StupidShirtsAddingItems.gif'}
-          stack={[reactIcon, reduxIcon, 'https://png2.cleanpng.com/sh/9e4541df87ed738598d43310ee84947e/L0KzQYm3VME4N6dxiZH0aYP2gLBuTfZqepZneeVuLXPvf8brTf1me6Rmf9t3Zz3mf773lgRmel5ue9H3cz3qf7FujPUua510RdlydHj4cn68gfQ2bGRofaZvY0S5QHA7V8MxO2Q5TKMAMkO8RoOBU8A0Omc8RuJ3Zx==/kisspng-firebase-cloud-messaging-computer-icons-google-clo-github-5ad5d3ce4fc460.4730334415239628303267.png', 'https://material-ui.com/static/logo.png']}
+          stack={[reactIcon, reduxIcon, 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
           problem={
             `My first ReactJs project. I wanted to create a store front application that I could use as a template to create multiple online stores for myself and others.`
           }

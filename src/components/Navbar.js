@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 
   },
   listItem: {
-    border: '1px solid black'
+    borderBottom: '1px solid black'
   },
   menuIcon: {
     color: 'black',
@@ -44,15 +44,14 @@ const useStyles = makeStyles((theme) => ({
     height: 20 
   },
   listItemText: {
-    '.MuiListItemText-primary': {
-      fontSize: 100
-    }
+    fontSize: 50,
+    fontWeight: 'bold'
   }, 
   icon: {
     color: 'black',
     padding: 10,
-    height: 45,
-    width: 45,
+    height: 65,
+    width: 65,
   },
   LinkedInIcon: {
     padding: 5,
@@ -81,19 +80,19 @@ const Navbar = () => {
           <IconButton edge="start">
             <MenuIcon className={classes.menuIcon} onClick={() => setDrawerOpen(!drawerOpen)}/>
           </IconButton>
-          <SwipeableDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} anchor='top'>
+          <SwipeableDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} anchor='right'>
             <List style={{padding: 0}}>
-              <ListItem className={classes.listItem} button key={"Github"}>
+              <ListItem className={classes.listItem} component="a" target='_blank' href='https://github.com/Colebuildanddevelop' button key={"Github"}>
                 <ListItemIcon><GitHubIcon className={classes.icon} /></ListItemIcon>
-                <ListItemText className={classes.listItemText} primary={"Github"} />
+                <ListItemText classes={{primary: classes.listItemText}}  primary={"Github"} />
               </ListItem>
-              <ListItem className={classes.listItem} button key={"LinkedIn"}>
-                <ListItemIcon><LinkedInIcon className={classes.LinkedInIcon} /></ListItemIcon>
-                <ListItemText className={classes.listItemText} primary={"LinkedIn"} />
+              <ListItem  className={classes.listItem} component="a" target='_blank' href='https://www.linkedin.com/in/cole-davis-8b13701a0/' button key={"LinkedIn"}>
+                <ListItemIcon><LinkedInIcon style={{ height: 70, width: 70 }} className={classes.LinkedInIcon} /></ListItemIcon>
+                <ListItemText classes={{primary: classes.listItemText}} primary={"LinkedIn"} />
               </ListItem>
-              <ListItem className={classes.listItem} button key={"Medium"}>
+              <ListItem className={classes.listItem} component="a" target='_blank' href='https://medium.com/@colebuildanddevelop' button key={"Medium"}>
                 <ListItemIcon><img className={classes.icon} alt="medium icon" src={mediumIcon} /></ListItemIcon>
-                <ListItemText className={classes.listItemText} primary={"Medium"} />
+                <ListItemText classes={{primary: classes.listItemText}} primary={"Medium"} />
               </ListItem>
             </List>
           </SwipeableDrawer>

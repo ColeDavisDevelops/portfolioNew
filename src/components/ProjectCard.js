@@ -43,6 +43,7 @@ const ProjectCard = (props) => {
     },
     image: {
       width: '100%',
+      maxHeight: 90,
       margin: 'auto',
     },
     description: {
@@ -51,7 +52,10 @@ const ProjectCard = (props) => {
     button: {
       backgroundColor: 'black',
       color: 'white',
-      marginBottom: 10
+      marginBottom: 10,
+      '&:hover': {
+        color: 'black'
+      }
     }
   }));
 
@@ -82,7 +86,7 @@ const ProjectCard = (props) => {
             </Typography>
           </Grid>
           <Grid item container xs={12}>
-            {props.stack.map(svg => <Grid style={{display: 'block'}} item xs={3}><img className={classes.image} src={svg} /></Grid>)}
+            {props.stack.map((svg, idx) => <Grid style={{display: 'block'}} item xs={3} key={idx}><img className={classes.image} alt={props.title} src={svg} /></Grid>)}
           </Grid>
           <Divider variant="fullWidth" style={{background: 'black', marginTop: 10, marginBottom: 10}} />
           <Grid item xs={12}>
@@ -102,7 +106,7 @@ const ProjectCard = (props) => {
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <Button className={classes.button} target="_blank" href={props.website} fullWidth variant="contained">
+            <Button className={classes.button} target="_blank" href={props.website} fullWidth variant="outlined">
               Website
             </Button>
             <Button className={classes.button} target="_blank" href={props.github} fullWidth variant="outlined">

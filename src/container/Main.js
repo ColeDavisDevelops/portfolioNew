@@ -52,7 +52,7 @@ const Main = () => {
           Software Engineer
         </Typography>
         <Typography variant="h6" align="center">
-          I am a problem solver who codes.
+          I am a problem solver who codes!
         </Typography>
       </Grid>
       <Grid className={classes.workContainer} item container>
