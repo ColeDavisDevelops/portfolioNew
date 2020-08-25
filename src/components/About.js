@@ -44,15 +44,14 @@ const About = () => {
           <Grid item xs={12}>
             <Typography className={classes.text} align="left" variant="h6">
               For my personal well being I find it essential to be laser focused on improving or striving for something. 
-              For a long time I wanted to be a professional investor and trader. What I loved most about trading 
+              My first true passion was trading and investing. What I loved most about trading 
               was the complexity that came with markets and finding profitable strategies. In 2017 I transitioned to
-              playing poker professionally where I eventually stopped in 2019. Poker and trading ultimately came up short due 
-              to their zero sum nature. With hopes of creating value I 
-              decided to pursue a career in technology. I soon found a foot in the industry as an information technology 
-              support specialist in early 2019. After six or so months I found more direction and since then my time has been spent focused solely on software engineering.
-              What I love most about software engineering is the amount of things there are to learn and build. Exercising my coding knowledge and growing as 
-              a programmer is truly fulfilling work and there will never be a point where I will run out of things to learn or do. For this reason 
-              I find programming to be the best way to spend the rest of my life.     
+              playing poker professionally because of its many parallels to trading and investing. Poker and trading ultimately came up short due 
+              to their zero sum nature and my willingness to create value. For these reasons in 2019 I decided to put down the cards and pursue a career in technology. I soon found a foot in the industry as an information technology 
+              support specialist. After six or so months I developed more direction and decided to specialize in software engineering.
+              What I love most about software engineering is the amount of things there are to learn and build. Exercising my coding knowledge and seeing my growth as 
+              a programmer is truly fulfilling and fun work. There will never be a point where I will run out of things to learn or do. Furthermore programming is industry agnostic which allows me to provide value to any industry I am interested in. For these reasons 
+              I find programming to be the best way to spend the rest of my life. 
             </Typography>
           </Grid>
         </Grid>

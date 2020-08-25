@@ -41,8 +41,7 @@ const Projects = () => {
           solution={
             `Users create tournaments varying in entry fees, entry limits, and durations. Upon entering a tournament, users are granted a simulated trading account where 
             they are free to make simulated trades. When the tournament concludes, the user with the highest simulated balance is granted all the entry fees accumulated from that tournament.
-            This allows new traders to compete against a known player pool for an arbitrarily small sum of money. 
-          `
+            This allows new traders to compete against a known player pool for an arbitrarily small sum of money as well as introduces new meta strategies when it comes to generating returns trading stocks.`
           }
           website={"https://stonk-kings.herokuapp.com/"}
           github={"https://github.com/Colebuildanddevelop/TKings"}
@@ -63,9 +62,9 @@ const Projects = () => {
             `
           }
           solution={
-            `FriendsWithVidz allows users to add YouTube videos to a public queue. Videos play in sync server side ensuring everyone is experiencing the video at the same time. When a video is played the user who queued the video is displayed and can be
-            given props by other users. Users can also vote to skip the currently playing video. This creates incentives for users to play videos that the public audience will enjoy. A live chat allows users to discuss videos as they play and create an 
-            alive experience.
+            `FriendsWithVidz allows users to add YouTube videos to a public queue. Videos play server side ensuring everyone is experiencing the video at the same time. When a video is played the user who queued the video is displayed and can be
+            given props by other users. Users can also vote to skip the currently playing video. This creates incentives for users to play videos that the public audience will enjoy. A live chat allows users to discuss videos as they play and create a community
+            experience.
           `
           }
           website={"https://friendswithvids.firebaseapp.com/"}
@@ -84,7 +83,7 @@ const Projects = () => {
           }
           solution={
             `All tournaments game state and user funds are handled by solidity code I wrote hosted on Ethereum. This decentralized backend results in pure transparency for users. 
-             The aim of the competetion is to predict the closing price of the given asset at the end of a given duration. Once a tournaemnt has started predictions are no longer accepted. To make a prediction users must pay an associated fee.
+             The aim of the competetion is to predict the closing price of the given asset at the end of a given duration. Once a tournament has started predictions are no longer accepted. To make a prediction users must pay an associated fee.
              Users can make as many predicions as they please before the tournament starts. When the tournament concludes, the user with the closest prediction to the assets price at that time will be awarded the accumulated fees from all user predictions. 
             `
           }

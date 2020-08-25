@@ -60,7 +60,7 @@ const Home = (props) => {
     <Grid className={classes.container} container>
       <div id="home" class={classes.title}>
         <Typography style={{fontWeight: 'bold'}} variant="h6" align="center">
-          Hi, I am Cole.
+          Hi! I'm Cole.
         </Typography>
         <Button onClick={() => props.history.push('/main')} className={classes.button} fullWidth variant="outlined">
           Enter

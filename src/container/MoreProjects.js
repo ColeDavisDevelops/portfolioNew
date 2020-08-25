@@ -55,7 +55,7 @@ const MoreProjects = () => {
         description={`
           The Efficient Workout is a command line interface that allows users to record 
           information about their workouts, search through various listed trainers as well as be suggested a trainer based 
-          on their workout preferences.
+          on their workout preferences. 
         `}
         github={'https://github.com/Colebuildanddevelop/thach_cole_project'}
         demo={'https://www.youtube.com/watch?v=ufxFC39xr70'}
