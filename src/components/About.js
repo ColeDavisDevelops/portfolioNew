@@ -63,13 +63,13 @@ const About = () => {
           </Grid>
           <Grid item xs={12}>
             <Typography className={classes.text} align="left" variant="h6">
-              - My Dogs, I have two! 
+              - My Dogs, animals in general
             </Typography>
             <Typography className={classes.text} align="left" variant="h6">
               - UFC, I love the combination of skills that make up great fighters!
             </Typography>
             <Typography className={classes.text} align="left" variant="h6">
-              - Video Games, ofc
+              - Video Games
             </Typography>
             <Typography className={classes.text} align="left" variant="h6">
               - Disc Golf
