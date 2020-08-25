@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 20,
     position: 'absolute',
     borderRadius: 10,
-    border: '5px solid black',
+    border: '1px solid black',
     textAlign: 'center',
     top: '40%',
     [theme.breakpoints.down('md')]: {
