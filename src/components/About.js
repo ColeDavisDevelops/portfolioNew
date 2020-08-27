@@ -15,9 +15,7 @@ const useStyles = makeStyles(theme => ({
   container: {
     [theme.breakpoints.down('md')]: {
       padding: 20
-      
     }
-
   },
   text: {
     [theme.breakpoints.down('lg')]: {
