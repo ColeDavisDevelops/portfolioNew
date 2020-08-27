@@ -11,8 +11,13 @@ const theme = createMuiTheme({
     primary: {
       main: "#fafafa",
       dark: "#000000"
+    },
+    background: {
+      paper: 'black'
     }
+
   }
+
 })
 
 ReactDOM.render(

@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
     padding: 1,
     marginTop: 20,
     marginBottom: 20,
-    backgroundColor: 'lightblack'
+    backgroundColor: 'white'
   },
   moreProjects: {
     padding: 20

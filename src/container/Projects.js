@@ -1,7 +1,10 @@
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
 import Grid from '@material-ui/core/Grid';
-import stonkGif from '../static/stonk.gif';
+import stonkImg from '../static/stonkkings.png';
+import friendsImg from '../static/friends.png';
+import predictImg from '../static/predict.png';
+import stupidShirtsImg from '../static/stupidshirts.png';
 
 import reactIcon from '../static/react.svg';
 import reduxIcon from '../static/redux.svg';
@@ -26,12 +29,12 @@ const Projects = () => {
   const classes = useStyles();
   return (
     <>
-      <Grid style={{padding: 10}} item xs={12} md={6} xl={3}>
+      <Grid style={{padding: 10}} item xs={12} md={6} xl={4}>
         <ProjectCard
           title={'StonkKings'} 
           timeout={250}
           backgroundColor={'#d84315'}
-          image={stonkGif}
+          image={stonkImg}
           stack={[reactIcon, reduxIcon, nodeIcon, mongoIcon]}
           problem={
             `New stock traders are faced with high barriers to entry. Due to SEC requirements, one needs atleast $25,000 to start 
@@ -47,13 +50,13 @@ const Projects = () => {
           github={"https://github.com/Colebuildanddevelop/TKings"}
         />
       </Grid>
-      <Grid style={{padding: 10}} item xs={12} md={6} xl={3}>
+      <Grid style={{padding: 10}} item xs={12} md={6} xl={4}>
         <ProjectCard
           title={'FriendsWithVidz'} 
           timeout={500}
           backgroundColor={'#673ab7'}
           color={'white'}
-          image={'https://raw.githubusercontent.com/Colebuildanddevelop/Portfolio/master/src/fwv.gif'}
+          image={friendsImg}
           stack={[reactIcon, reduxIcon, 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
           problem={
             `Watching YouTube with friends can be a tedious task when you have to ensure that the video you're watching is synced up with everyone elses. 
@@ -71,12 +74,13 @@ const Projects = () => {
           github={"https://github.com/Colebuildanddevelop/friendswithvids"}
         />
       </Grid>
-      <Grid style={{padding: 10}} item xs={12} md={6} xl={3}>
+
+      <Grid style={{padding: 10}} item xs={12} md={6} xl={4}>
         <ProjectCard
           title={'PredictBR'} 
           timeout={750}
           backgroundColor={'#5ee07d'}
-          image={'https://raw.githubusercontent.com/Colebuildanddevelop/Portfolio/master/src/predictChoseGame.gif'}
+          image={predictImg}
           stack={[reactIcon, 'https://cdn-images-1.medium.com/max/400/1*uFuRJ8osF_ma0FF7Un1cag.png', 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
           problem={
             `PredictBr aims to solve the same problem that Stonk Kings solves. Reduce barriers to entry for new traders and create a new paradigm of competition.`
@@ -91,13 +95,13 @@ const Projects = () => {
           github={"https://github.com/Colebuildanddevelop/PredictBr"}
         />
       </Grid>
-      <Grid style={{padding: 10}} item xs={12} md={6} xl={3}>
+      <Grid style={{padding: 10}} item xs={12} md={6} xl={4}>
         <ProjectCard
           title={'StupidShirts'} 
           timeout={1000}
-          backgroundColor={'black'}
+          backgroundColor={'rgb(49 49 49)'}
           color={'white'}
-          image={'https://raw.githubusercontent.com/Colebuildanddevelop/Portfolio/master/src/StupidShirtsAddingItems.gif'}
+          image={stupidShirtsImg}
           stack={[reactIcon, reduxIcon, 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
           problem={
             `My first ReactJs project. I wanted to create a store front application that I could use as a template to create multiple online stores for myself and others.`

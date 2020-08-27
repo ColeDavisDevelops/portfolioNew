@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+  navbar: {
+    backgroundColor: 'black',
+    color: 'white'
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
@@ -36,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: '1px solid black'
   },
   menuIcon: {
-    color: 'black',
+    color: 'white',
     [theme.breakpoints.up('xl')]: {
       width: 50,
       height: 50 
@@ -73,7 +77,7 @@ const Navbar = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar className={classes.navbar} position="static">
         <Toolbar>
           <Typography className={classes.title}>
             {'<Cole Davis />'}

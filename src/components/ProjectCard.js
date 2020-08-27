@@ -3,126 +3,107 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import Divider from '@material-ui/core/Divider';
 import Grow from '@material-ui/core/Grow';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
 
 
 const ProjectCard = (props) => {
   const useStyles = makeStyles((theme) => ({
-    card: {
-      [theme.breakpoints.up('md')] : {
-        maxHeight: 950,
-        minWidth: 420,
-        maxWidth: 420,
-        minHeight: 950,
-        padding: 20,
-      },
+    imageContainer: {
+      backgroundColor: props.backgroundColor,
       padding: 10,
-      margin: 'auto',
-      backgroundColor: props.backgroundColor,
-      border: '5px solid black',
-      borderRadius: 10,
-      cursor: 'pointer',
-      backgroundSize: 'cover'
-    },
-    infoButton: {
-      marginTop: 10,
-      fontSize: 20,
-      backgroundColor: props.backgroundColor,
-      fontWeight: 'bolder',
-      color: props.color ? props.color : 'black',
-    },
-    title: { 
-      paddingBottom: 10,    
-      color: props.color ? props.color : 'black',
-      fontWeight: 'bold'
-    },
-    projectGif: {
-      width: '100%',
-      maxHeight: '90%'
+      borderRadius: 20 
     },
     image: {
-      width: '100%',
-      maxHeight: 90,
-      margin: 'auto',
+      maxWidth: '100%',
+      height: 'auto',
+      borderRadius: '1%'
+    },
+    title: { 
+      fontWeight: 'bolder',
+      paddingTop: 10
     },
     description: {
-      paddingBottom: 20
+      color: 'rgb(170, 170, 170)'
+    },
+    icon: {
+      float: 'left',
+      maxWidth: 60,
+      maxHeight: 60,
+      paddingRight: 10,
+      paddingTop: 20,
     },
     button: {
+      padding: 0,
+      paddingTop: 10,
+      paddingRight: 10,
       backgroundColor: 'black',
       color: 'white',
       marginBottom: 10,
       '&:hover': {
+        backgroundColor: 'white',
         color: 'black'
       }
     }
   }));
 
-  const [showInfo, setShowInfo] = useState(false);
   const [checked, setChecked] = useState(false);
-  const classes = useStyles();
 
   setTimeout(() => {
     setChecked(true);
   }, props.timeout);
 
+  const classes = useStyles();
+
   return (
-    <div 
-      onMouseEnter={() => setShowInfo(true)}
-      onMouseLeave={() => setShowInfo(false)}
-      onClick={() => setShowInfo(!showInfo)}
-    >
+    <>
       <Grow in={checked}>
-        {!showInfo ? ( 
-          <div className={classes.card} >
-            <Typography className={classes.title} variant="h4">
+        <Grid container style={{paddingTop: 20}}>
+          <Grid className={classes.imageContainer} item xs={12}>
+            <img className={classes.image} src={props.image}/>
+          </Grid>
+          <Grid item xs={12}>
+            {props.stack.map(icon => <img className={classes.icon} src={icon} />)}
+          </Grid>
+          <Grid className={classes.title} item>
+            <Typography variant="h3" align="left">
               {props.title}
             </Typography>
-            <img className={classes.projectGif} src={props.image}/>
-            <Button className={classes.infoButton} onClick={() => setShowInfo(true)} fullWidth>
-              click for more
-            </Button>
-          </div>
-        ) : (
-          <Grid style={{backgroundColor: 'white', display: 'flex'}} className={classes.card} container direction="column">
-            <Grid item xs={12}>
-              <Typography className={classes.title} align="center" style={{color: 'black'}} variant="h4">
-                {props.title}
-              </Typography>
-            </Grid>
-            <Grid item container xs={12}>
-              {props.stack.map((svg, idx) => <Grid style={{display: 'block'}} item xs={3} key={idx}><img className={classes.image} alt={props.title} src={svg} /></Grid>)}
-            </Grid>
-            <Divider variant="fullWidth" style={{background: 'black', marginTop: 10, marginBottom: 10}} />
-            <Grid item xs={12}>
-              <Typography style={{color: 'black'}} variant="h4">
-                Problem
-              </Typography>
-              <Typography className={classes.description} style={{color: 'black'}} variant="body1">
-                {props.problem}
-              </Typography>
-            </Grid>
-            <Grid style={{flexGrow: 1}} item xs={12}>
-              <Typography style={{color: 'black'}} variant="h4">
-                Solution
-              </Typography>
-              <Typography className={classes.description} style={{color: 'black'}} variant="body1">
-                {props.solution}
-              </Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Button className={classes.button} target="_blank" href={props.website} fullWidth variant="outlined">
-                Website
-              </Button>
-              <Button className={classes.button} target="_blank" href={props.github} fullWidth variant="outlined">
-                Github Repository
-              </Button>
-            </Grid>
           </Grid>
-        )}
+          <Grid className={classes.description} item>
+            <Typography variant="p" align="left">
+              {props.problem}
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Button 
+              className={classes.button} 
+              endIcon={<ArrowRightAltIcon/>} 
+              variant="outlined"
+              target="_blank"
+              href={props.github}
+            >
+              Github 
+            </Button>
+            <Button 
+              className={classes.button} 
+              endIcon={<ArrowRightAltIcon/>} 
+              variant="outlined"
+              target="_blank"
+              href={props.website}
+            >
+              Website 
+            </Button>
+          </Grid>
+        </Grid>
       </Grow>
-    </div>
+    </>
   )
 }
 
