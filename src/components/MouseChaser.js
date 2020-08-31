@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     willChange: 'transform',
     boxShadow: '10px 10px 5px 0px rgba(0, 0, 0, 0.75)',
     border: '5px solid black',
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     width: 110,
     height: 110,
   }

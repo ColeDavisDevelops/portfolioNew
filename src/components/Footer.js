@@ -7,10 +7,20 @@ import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
   footer: {
+    [theme.breakpoints.up('lg')]: {
+      paddingLeft: 100
+    },
+    [theme.breakpoints.down('md')]: {
+      paddingLeft: 10 
+    },
+
+    position: 'relative',
+    top: '30%',
     width: '100%',
-    margin: 'auto',
-    marginTop: 10,
-    marginBottom: 20
+  },
+  title: {
+    fontWeight: 'bolder'
+
   },
   icon: {
     width: '100%',
@@ -20,23 +30,23 @@ const useStyles = makeStyles(theme => ({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <React.Fragment>
+    <div className={classes.footer}>
       {/* Footer */}
-      <footer className={classes.footer}>
-        <Typography style={{textDecoration: 'underline'}} variant="h3" align="center">
-          Contact
+      <footer >
+        <Typography className={classes.title} variant="h1" align="left">
+          Let's build!
         </Typography>
-        <Typography variant="h6" align="center" component="p" >
+        <Typography variant="h6" align="left">
           colebuildanddevelop@gmail.com
         </Typography>
         <Link href="https://github.com/Colebuildanddevelop">
-          <Typography variant="h6" align="center" component="p" >            
+          <Typography variant="h6" align="left">            
             https://github.com/Colebuildanddevelop
           </Typography>
         </Link>
       </footer>
       {/* End footer */}
-    </React.Fragment>
+    </div>
   )
 }
 

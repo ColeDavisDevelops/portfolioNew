@@ -15,7 +15,7 @@ body {
 }
 
 .hooks-main {
-  background-color: black;
+  animation: colorchange 5s infinite; 
   z-index: -1;
   position: absolute;
   width: 100%;
@@ -24,7 +24,6 @@ body {
 }
 
 #home {
-  animation: colorchange 5s infinite; 
 }
 
 @keyframes colorchange

@@ -35,6 +35,13 @@ const useStyles = makeStyles(theme => ({
   },
   moreProjects: {
     padding: 20
+  },
+  footerContainer: {
+    height: 500,
+    marginTop: 50,
+    borderTop: '1px solid white',
+    backgroundSize: 'cover',
+    backgroundImage: 'url(https://media2.giphy.com/media/elzCnIQAjQMWA/giphy.gif)'
   }
 }));
 
@@ -42,8 +49,10 @@ const Main = () => {
   const classes = useStyles();
   return (
     <Grid container>
-      <NavBar/>
-      <Grid style={{marginTop: 50, marginBottom: 10}} item xs={12}>
+      <Grid item xs={12}>
+        <NavBar/>
+      </Grid>
+      <Grid style={{marginTop: 150, marginBottom: 10}} item xs={12}>
         <Avatar />
       </Grid>
       <Grid item xs={12}>
@@ -54,7 +63,7 @@ const Main = () => {
           I am a problem solver who codes!
         </Typography>
       </Grid>
-      <Grid className={classes.workContainer} item container>
+      <Grid className={classes.workContainer} item container xs={12}>
         <Divider className={classes.divider} variant="middle" />
         <Projects/>
         <Divider className={classes.divider} variant="middle" />
@@ -63,7 +72,8 @@ const Main = () => {
         </Grid>
         <Divider className={classes.divider} variant="middle" />
         <About />
-        <Divider className={classes.divider} variant="middle" />
+      </Grid>
+      <Grid className={classes.footerContainer} item xs={12}>
         <Footer />
       </Grid>
     </Grid>

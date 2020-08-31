@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'black'
   },
   title: {
+    backgroundColor: 'black',
     display: 'relative',
     padding: 20,
     position: 'absolute',
@@ -44,8 +45,10 @@ const useStyles = makeStyles((theme) => ({
   button: {
     border: 'none',
     '&:hover': {
-      backgroundColor: '#dbd7f7',
+      backgroundColor: 'white',
+      color: 'black'
     },
+    color: 'white',
     fontWeight: 'bold',
     fontSize: 20, 
   },
@@ -59,7 +62,7 @@ const Home = (props) => {
   return (
     <Grid className={classes.container} container>
       <div id="home" class={classes.title}>
-        <Typography style={{fontWeight: 'bold'}} variant="h6" align="center">
+        <Typography style={{fontWeight: 'bold', color: 'white'}} variant="h6" align="center">
           Hi! I'm Cole.
         </Typography>
         <Button onClick={() => props.history.push('/main')} className={classes.button} fullWidth variant="outlined">
