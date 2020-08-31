@@ -26,11 +26,11 @@ const Footer = () => {
         <Typography style={{textDecoration: 'underline'}} variant="h3" align="center">
           Contact
         </Typography>
-        <Typography variant="h6" align="center" color="textSecondary" component="p" >
+        <Typography variant="h6" align="center" component="p" >
           colebuildanddevelop@gmail.com
         </Typography>
         <Link href="https://github.com/Colebuildanddevelop">
-          <Typography variant="h6" align="center" color="textSecondary" component="p" >            
+          <Typography variant="h6" align="center" component="p" >            
             https://github.com/Colebuildanddevelop
           </Typography>
         </Link>

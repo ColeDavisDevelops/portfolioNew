@@ -5,7 +5,11 @@ import stonkImg from '../static/stonkkings.png';
 import friendsImg from '../static/friends.png';
 import predictImg from '../static/predict.png';
 import stupidShirtsImg from '../static/stupidshirts.png';
-
+import notRedditImg from '../static/reddit.png';
+import playlisterImg from '../static/playlister.png';
+import railsIcon from '../static/rails.svg';
+import postgresqlIcon from '../static/postgresql.svg';
+import bootstrapIcon from '../static/bootstrap.svg';
 import reactIcon from '../static/react.svg';
 import reduxIcon from '../static/redux.svg';
 import nodeIcon from '../static/node.svg';
@@ -33,7 +37,7 @@ const Projects = () => {
         <ProjectCard
           title={'StonkKings'} 
           timeout={250}
-          backgroundColor={'#d84315'}
+          backgroundColor={'#ff6637'}
           image={stonkImg}
           stack={[reactIcon, reduxIcon, nodeIcon, mongoIcon]}
           problem={
@@ -54,8 +58,7 @@ const Projects = () => {
         <ProjectCard
           title={'FriendsWithVidz'} 
           timeout={500}
-          backgroundColor={'#673ab7'}
-          color={'white'}
+          backgroundColor={'#9356ff'}
           image={friendsImg}
           stack={[reactIcon, reduxIcon, 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
           problem={
@@ -79,7 +82,7 @@ const Projects = () => {
         <ProjectCard
           title={'PredictBR'} 
           timeout={750}
-          backgroundColor={'#5ee07d'}
+          backgroundColor={'#86ffa3'}
           image={predictImg}
           stack={[reactIcon, 'https://cdn-images-1.medium.com/max/400/1*uFuRJ8osF_ma0FF7Un1cag.png', 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
           problem={
@@ -99,10 +102,48 @@ const Projects = () => {
         <ProjectCard
           title={'StupidShirts'} 
           timeout={1000}
-          backgroundColor={'rgb(49 49 49)'}
-          color={'white'}
+          backgroundColor={'#909090'}
           image={stupidShirtsImg}
           stack={[reactIcon, reduxIcon, 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
+          problem={
+            `My first ReactJs project. I wanted to create a store front application that I could use as a template to create multiple online stores for myself and others.`
+          }
+          solution={
+            `Created a custom stripe checkout experience using the stripe API in order to ensure PCI compliance. Used local storage to handle user shopping cart data. 
+            Used redux for central application state management. Styled with material ui. 
+          `
+          }
+          website={"https://stupid-shirts.firebaseapp.com/"}
+          github={"https://github.com/Colebuildanddevelop/StupidShirts"}
+        />
+      </Grid>
+      <Grid style={{padding: 10}} item xs={12} md={6} xl={4}>
+        <ProjectCard
+          title={'Playlister'} 
+          timeout={1250}
+          backgroundColor={'#fc6464'}
+          image={playlisterImg}
+          stack={[reactIcon, railsIcon, bootstrapIcon, postgresqlIcon]}
+          problem={
+            `My first ReactJs project. I wanted to create a store front application that I could use as a template to create multiple online stores for myself and others.`
+          }
+          solution={
+            `Created a custom stripe checkout experience using the stripe API in order to ensure PCI compliance. Used local storage to handle user shopping cart data. 
+            Used redux for central application state management. Styled with material ui. 
+          `
+          }
+          website={"https://stupid-shirts.firebaseapp.com/"}
+          github={"https://github.com/Colebuildanddevelop/StupidShirts"}
+        />
+      </Grid>
+      <Grid style={{padding: 10}} item xs={12} md={6} xl={4}>
+        <ProjectCard
+          title={'NotReddit'} 
+          timeout={1500}
+          backgroundColor={'royalblue'}
+          image={notRedditImg}
+          stack={[railsIcon]}
+          
           problem={
             `My first ReactJs project. I wanted to create a store front application that I could use as a template to create multiple online stores for myself and others.`
           }

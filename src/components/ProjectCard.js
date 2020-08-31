@@ -4,26 +4,20 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
-import Divider from '@material-ui/core/Divider';
 import Grow from '@material-ui/core/Grow';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
 
 
 const ProjectCard = (props) => {
   const useStyles = makeStyles((theme) => ({
     imageContainer: {
       backgroundColor: props.backgroundColor,
-      padding: 10,
+      padding: 5,
       borderRadius: 20 
     },
     image: {
       maxWidth: '100%',
       height: 'auto',
-      borderRadius: '1%'
+      borderRadius: 20 
     },
     title: { 
       fontWeight: 'bolder',

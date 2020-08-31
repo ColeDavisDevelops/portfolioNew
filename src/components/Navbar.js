@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import Slide from '@material-ui/core/Slide';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import MenuIcon from '@material-ui/icons/Menu';
 import IconButton from '@material-ui/core/IconButton';
@@ -21,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navbar: {
     backgroundColor: 'black',
+    borderBottom: '2px solid white',
     color: 'white'
   },
   menuButton: {
@@ -71,43 +74,56 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+function HideOnScroll(props) {
+  const { children, window } = props;
+  const trigger = useScrollTrigger({ target: window ? window() : undefined });
+
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
+
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <AppBar className={classes.navbar} position="static">
-        <Toolbar>
-          <Typography className={classes.title}>
-            {'<Cole Davis />'}
-          </Typography>
-          <IconButton edge="start">
-            <MenuIcon className={classes.menuIcon} onClick={() => setDrawerOpen(!drawerOpen)}/>
-          </IconButton>
-          <SwipeableDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} anchor='right'>
-            <List style={{padding: 0}}>
-              <ListItem className={classes.listItem} component="a" target='_blank' href='https://docs.google.com/document/d/e/2PACX-1vRSJk-NgIjoBdFVykocdBlveWbxkQXhaKooxzKdoRt2mgg-A6FHMzHCQFn0AuaErXZcDFLHMfMW__8M/pub' button key={"Github"}>
-                <ListItemIcon><DescriptionIcon className={classes.icon} /></ListItemIcon>
-                <ListItemText classes={{primary: classes.listItemText}}  primary={"Resume"} />
-              </ListItem>
-              <ListItem className={classes.listItem} component="a" target='_blank' href='https://github.com/Colebuildanddevelop' button key={"Github"}>
-                <ListItemIcon><GitHubIcon className={classes.icon} /></ListItemIcon>
-                <ListItemText classes={{primary: classes.listItemText}}  primary={"Github"} />
-              </ListItem>
-              <ListItem  className={classes.listItem} component="a" target='_blank' href='https://www.linkedin.com/in/cole-davis-8b13701a0/' button key={"LinkedIn"}>
-                <ListItemIcon><LinkedInIcon style={{ height: 70, width: 70 }} className={classes.LinkedInIcon} /></ListItemIcon>
-                <ListItemText classes={{primary: classes.listItemText}} primary={"LinkedIn"} />
-              </ListItem>
-              <ListItem className={classes.listItem} component="a" target='_blank' href='https://medium.com/@colebuildanddevelop' button key={"Medium"}>
-                <ListItemIcon><img className={classes.icon} alt="medium icon" src={mediumIcon} /></ListItemIcon>
-                <ListItemText classes={{primary: classes.listItemText}} primary={"Medium"} />
-              </ListItem>
-            </List>
-          </SwipeableDrawer>
-        </Toolbar>
-      </AppBar>
-    </div>
+    <React.Fragment>
+      <HideOnScroll>
+        <AppBar className={classes.navbar} position="static">
+          <Toolbar>
+            <Typography className={classes.title}>
+              {'<Cole Davis />'}
+            </Typography>
+            <IconButton edge="start">
+              <MenuIcon className={classes.menuIcon} onClick={() => setDrawerOpen(!drawerOpen)}/>
+            </IconButton>
+            <SwipeableDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} anchor='right'>
+              <List style={{padding: 0}}>
+                <ListItem className={classes.listItem} component="a" target='_blank' href='https://docs.google.com/document/d/e/2PACX-1vRSJk-NgIjoBdFVykocdBlveWbxkQXhaKooxzKdoRt2mgg-A6FHMzHCQFn0AuaErXZcDFLHMfMW__8M/pub' button key={"Github"}>
+                  <ListItemIcon><DescriptionIcon className={classes.icon} /></ListItemIcon>
+                  <ListItemText classes={{primary: classes.listItemText}}  primary={"Resume"} />
+                </ListItem>
+                <ListItem className={classes.listItem} component="a" target='_blank' href='https://github.com/Colebuildanddevelop' button key={"Github"}>
+                  <ListItemIcon><GitHubIcon className={classes.icon} /></ListItemIcon>
+                  <ListItemText classes={{primary: classes.listItemText}}  primary={"Github"} />
+                </ListItem>
+                <ListItem  className={classes.listItem} component="a" target='_blank' href='https://www.linkedin.com/in/cole-davis-8b13701a0/' button key={"LinkedIn"}>
+                  <ListItemIcon><LinkedInIcon style={{ height: 70, width: 70 }} className={classes.LinkedInIcon} /></ListItemIcon>
+                  <ListItemText classes={{primary: classes.listItemText}} primary={"LinkedIn"} />
+                </ListItem>
+                <ListItem className={classes.listItem} component="a" target='_blank' href='https://medium.com/@colebuildanddevelop' button key={"Medium"}>
+                  <ListItemIcon><img className={classes.icon} alt="medium icon" src={mediumIcon} /></ListItemIcon>
+                  <ListItemText classes={{primary: classes.listItemText}} primary={"Medium"} />
+                </ListItem>
+              </List>
+            </SwipeableDrawer>
+          </Toolbar>
+        </AppBar>
+      </HideOnScroll>
+    </React.Fragment>
   );
 }
 
