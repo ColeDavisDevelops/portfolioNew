@@ -9,12 +9,8 @@ import Grow from '@material-ui/core/Grow';
 
 const ProjectCard = (props) => {
   const useStyles = makeStyles((theme) => ({
-    imageContainer: {
-      backgroundColor: props.backgroundColor,
-      padding: 5,
-      borderRadius: 20 
-    },
     image: {
+      border: `2px solid ${props.backgroundColor}`,
       maxWidth: '100%',
       height: 'auto',
       borderRadius: 20 
@@ -59,7 +55,7 @@ const ProjectCard = (props) => {
     <>
       <Grow in={checked}>
         <Grid container style={{paddingTop: 20}}>
-          <Grid className={classes.imageContainer} item xs={12}>
+          <Grid item xs={12}>
             <img className={classes.image} src={props.image}/>
           </Grid>
           <Grid item xs={12}>
@@ -72,7 +68,7 @@ const ProjectCard = (props) => {
           </Grid>
           <Grid className={classes.description} item>
             <Typography variant="p" align="left">
-              {props.problem}
+              {props.description}
             </Typography>
           </Grid>
           <Grid item>

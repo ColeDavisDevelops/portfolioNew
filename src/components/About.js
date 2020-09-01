@@ -18,6 +18,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   text: {
+    color: 'rgb(170, 170, 170)',
     [theme.breakpoints.down('lg')]: {
       fontSize: 15 
     }

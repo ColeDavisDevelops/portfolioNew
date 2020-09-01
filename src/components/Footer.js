@@ -1,9 +1,9 @@
 import React from 'react';
 // MATERIAL-UI
 import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
+import MailIcon from '@material-ui/icons/Mail';
+import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles(theme => ({
   footer: {
@@ -20,7 +20,11 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     fontWeight: 'bolder'
-
+  },
+  email: {
+    color: 'white',
+    height: 40,
+    width: 40
   },
   icon: {
     width: '100%',
@@ -36,14 +40,15 @@ const Footer = () => {
         <Typography className={classes.title} variant="h1" align="left">
           Let's build!
         </Typography>
-        <Typography variant="h6" align="left">
-          colebuildanddevelop@gmail.com
+        <Typography variant="h4" align="left">
+          <Button 
+            endIcon={<MailIcon className={classes.email}/>} 
+            style={{color: 'white', fontSize: 30}} 
+            target="_blank" 
+            href="http://colebuildanddevelop@gmail.com">
+            Email
+          </Button>
         </Typography>
-        <Link href="https://github.com/Colebuildanddevelop">
-          <Typography variant="h6" align="left">            
-            https://github.com/Colebuildanddevelop
-          </Typography>
-        </Link>
       </footer>
       {/* End footer */}
     </div>

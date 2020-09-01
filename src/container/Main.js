@@ -15,12 +15,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('lg')]: {
       paddingLeft: 100, 
       paddingRight: 100,
-      maxWidth: 1920
+      maxWidth: 2400 
     },
-    [theme.breakpoints.between('md', 'lg')]: {
-      maxWidth: 1200 
-    },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       width: '100%'
     },
     margin: 'auto'
@@ -39,7 +36,6 @@ const useStyles = makeStyles(theme => ({
   footerContainer: {
     height: 500,
     marginTop: 50,
-    borderTop: '1px solid white',
     backgroundSize: 'cover',
     backgroundImage: 'url(https://media2.giphy.com/media/elzCnIQAjQMWA/giphy.gif)'
   }
