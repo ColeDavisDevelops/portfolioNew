@@ -55,7 +55,7 @@ const Main = () => {
         <Typography style={{fontWeight: 'bold'}} variant="h3" align="center">
           Software Engineer
         </Typography>
-        <Typography variant="h6" align="center">
+        <Typography style={{color: 'rgb(170, 170, 170)'}} variant="h6" align="center">
           I am a problem solver who codes!
         </Typography>
       </Grid>
