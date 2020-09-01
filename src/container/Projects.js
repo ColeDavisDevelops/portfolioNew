@@ -14,9 +14,7 @@ import reactIcon from '../static/react.svg';
 import reduxIcon from '../static/redux.svg';
 import nodeIcon from '../static/node.svg';
 import mongoIcon from '../static/mongoDb.svg';
-
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   workContainer: {
@@ -36,6 +34,7 @@ const Projects = () => {
       <Grid style={{padding: 10}} item xs={12} md={6} xl={4}>
         <ProjectCard
           title={'StonkKings'} 
+          buttonText={'Website'}
           timeout={250}
           backgroundColor={'#ff6637'}
           image={stonkImg}
@@ -53,16 +52,15 @@ const Projects = () => {
       <Grid style={{padding: 10}} item xs={12} md={6} xl={4}>
         <ProjectCard
           title={'FriendsWithVidz'} 
+          buttonText={'Website'}
           timeout={500}
           backgroundColor={'#9356ff'}
           image={friendsImg}
           stack={[reactIcon, reduxIcon, 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
           description={
-            `Watching YouTube with friends can be a tedious task when you have to ensure that the video you're watching is synced up with everyone elses. 
-            FriendsWithVidz allows users to add YouTube videos to a public queue. Videos play server side ensuring everyone is experiencing the video at the same time. While a video is being played, the user who queued the video is displayed. 
+            `FriendsWithVidz allows users to add YouTube videos to a public queue. Videos play server side ensuring everyone is experiencing the video at the same time. While a video is being played, the user who queued the video is displayed. 
             This grants the viewing audience the ability to express their liking for the video, or to cast a vote to skip the video. I added this feature to create incentives for users to only queue videos that the viewing party will enjoy.
-            Furthermore a live chat allows for discussion create an alive, social experience. FriendsWithVidz was created with Firebase, React, Redux, and Material UI.
-            `
+            Furthermore a live chat allows for discussion create an alive, social experience. FriendsWithVidz was created with Firebase, React, Redux, and Material UI.`
           }
           website={"https://friendswithvids.firebaseapp.com/"}
           github={"https://github.com/Colebuildanddevelop/friendswithvids"}
@@ -71,12 +69,16 @@ const Projects = () => {
       <Grid style={{padding: 10}} item xs={12} md={6} xl={4}>
         <ProjectCard
           title={'PredictBR'} 
+          buttonText={'Website'}
           timeout={750}
           backgroundColor={'#86ffa3'}
           image={predictImg}
           stack={[reactIcon, 'https://cdn-images-1.medium.com/max/400/1*uFuRJ8osF_ma0FF7Un1cag.png', 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
           description={
-            `PredictBr aims to solve the same descriptionthat Stonk Kings solves. Reduce barriers to entry for new traders and create a new paradigm of competition.`
+            `All state and user funds are handled by solidity code I wrote hosted on the Ethereum Network. A decentralized backend provides users transparency and ensures that I don't have access to funds or the ability to change computations associated with tournaments. 
+            The aim of the competition is to predict the closing price of the given asset at the end of a given duration. Once a tournament has started, predictions are no longer accepted. In order to make a prediction, users must pay an associated fee.
+            Users can make as many predictions as they please before the tournament starts. When the tournament concludes, the user with the closest prediction to the asset's price at that time will be awarded the accumulated fees from all user predictions. 
+            `
           }
           website={"https://valueisright.firebaseapp.com/"}
           github={"https://github.com/Colebuildanddevelop/PredictBr"}
@@ -85,12 +87,15 @@ const Projects = () => {
       <Grid style={{padding: 10}} item xs={12} md={6} xl={4}>
         <ProjectCard
           title={'StupidShirts'} 
+          buttonText={'Website'}
           timeout={1000}
           backgroundColor={'#909090'}
           image={stupidShirtsImg}
           stack={[reactIcon, reduxIcon, 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
           description={
-            `A store front application that I could use as a template to create multiple online stores for myself and others.`
+            `A storefront template that can be used to create multiple online stores. Payments are handled with a PCI compliant custom stripe integrated checkout API. I created StupidShirts with 
+            Google firebase for the backend. For the frontend I used React and Redux for central state management. Shopping cart data 
+            is stored client side using local storage.`
           }
           website={"https://stupid-shirts.firebaseapp.com/"}
           github={"https://github.com/Colebuildanddevelop/StupidShirts"}
@@ -99,21 +104,23 @@ const Projects = () => {
       <Grid style={{padding: 10}} item xs={12} md={6} xl={4}>
         <ProjectCard
           title={'Playlister'} 
+          buttonText={'Demo'}
           timeout={1250}
           backgroundColor={'#fc6464'}
           image={playlisterImg}
           stack={[reactIcon, railsIcon, bootstrapIcon, postgresqlIcon]}
           description={`
-            A platform that allows users to create their own playlist and share it with the world! Users can vote on which playlist they think is best and sort playlists by popularity. 
-            Created using the YouTube API, Ruby and Rails for object relational mapping, JWT for user authentication, PostgreSQL for data storage and React Bootstrap for styling.
+            A platform that allows users to create playlists and share with others! Users can vote on which playlist they think is best and sort playlists by popularity. 
+            Created using the YouTube API, Ruby on Rails for object relational mapping, JWT for user authentication, PostgreSQL for data storage and React Bootstrap for styling.
           `}
-          website={"https://stupid-shirts.firebaseapp.com/"}
-          github={"https://github.com/Colebuildanddevelop/StupidShirts"}
+          website={'https://www.youtube.com/watch?v=4YI3ROmPnB8'}
+          github={'https://github.com/Colebuildanddevelop/mod4-project'}
         />
       </Grid>
       <Grid style={{padding: 10}} item xs={12} md={6} xl={4}>
         <ProjectCard
           title={'NotReddit'} 
+          buttonText={'Demo'}
           timeout={1500}
           backgroundColor={'royalblue'}
           image={notRedditImg}
@@ -123,8 +130,8 @@ const Projects = () => {
             Users can like and comment on posts as well as sort posts by popularity. NotReddit was created using a Rails backend for ORM, embedded ruby for the frontend and MySQL for data
             persistence.  
           `}
-          website={"https://stupid-shirts.firebaseapp.com/"}
-          github={"https://github.com/Colebuildanddevelop/StupidShirts"}
+          website={'https://www.youtube.com/watch?v=DjTKA2AZJ0M'}
+          github={'https://github.com/Colebuildanddevelop/Mod2-project'}
         />
       </Grid>
     </>

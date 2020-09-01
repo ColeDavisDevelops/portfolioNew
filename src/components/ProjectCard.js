@@ -6,7 +6,6 @@ import Typography from '@material-ui/core/Typography';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import Grow from '@material-ui/core/Grow';
 
-
 const ProjectCard = (props) => {
   const useStyles = makeStyles((theme) => ({
     image: {
@@ -37,8 +36,8 @@ const ProjectCard = (props) => {
       color: 'white',
       marginBottom: 10,
       '&:hover': {
-        backgroundColor: 'white',
-        color: 'black'
+        backgroundColor: 'black',
+        color: 'white'
       }
     }
   }));
@@ -88,7 +87,7 @@ const ProjectCard = (props) => {
               target="_blank"
               href={props.website}
             >
-              Website 
+              {props.buttonText}
             </Button>
           </Grid>
         </Grid>

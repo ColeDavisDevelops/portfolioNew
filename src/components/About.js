@@ -47,7 +47,7 @@ const About = () => {
               was the complexity that came with markets and finding profitable strategies. In 2017 I transitioned to
               playing poker professionally because of its many parallels to trading and investing. Poker and trading ultimately came up short due 
               to their zero sum nature and my willingness to create value. For these reasons in 2019 I decided to put down the cards and pursue a career in technology. I soon found a foot in the industry as an information technology 
-              support specialist. After six or so months I developed more direction and decided to specialize in software engineering.
+              support specialist. After six months I developed more direction and decided to specialize in software engineering.
               What I love most about software engineering is the amount of things there are to learn and build. Exercising my coding knowledge and seeing my growth as 
               a programmer is truly fulfilling and fun work. There will never be a point where I will run out of things to learn or do. Furthermore programming is industry agnostic which allows me to provide value to any industry I am interested in. For these reasons 
               I find programming to be the best way to spend the rest of my life. 

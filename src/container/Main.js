@@ -48,10 +48,10 @@ const Main = () => {
       <Grid item xs={12}>
         <NavBar/>
       </Grid>
-      <Grid style={{marginTop: 150, marginBottom: 10}} item xs={12}>
-        <Avatar />
-      </Grid>
-      <Grid item xs={12}>
+      <Grid item contianer xs={12}>
+        <Grid style={{marginTop: 150, marginBottom: 10}} item xs={12}>
+          <Avatar />
+        </Grid>
         <Typography style={{fontWeight: 'bold'}} variant="h3" align="center">
           Software Engineer
         </Typography>

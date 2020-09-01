@@ -6,6 +6,9 @@ const Blogs = () => {
   const classes = {
     container: {
       minHeight: 550 
+    },
+    description: {
+      color: 'rgb(170, 170, 170)'
     }
   }
   return (
@@ -27,11 +30,11 @@ const Blogs = () => {
           top: 0;
         }
         .image {
-          max-width: 300px;
-          max-height: 300px;
+          max-width: 250px;
+          max-height: 250px;
           margin: auto;
-          min-width: 300px;
-          min-height: 300px;
+          min-width: 250px;
+          min-height: 250px;
         }
         `}
       </style>
@@ -49,7 +52,7 @@ const Blogs = () => {
           />
           <Carousel.Caption>
             <h3>Screen Scraping for Real-time Poker Data</h3>
-            <p>The plan is to take a screenshot of the cards dealt to me on poker stars. Convert the screenshots into a hash and manually map the hashes to their values in a python dictionary.</p>
+            <p style={classes.description}>The plan is to take a screenshot of the cards dealt to me on poker stars. Convert the screenshots into a hash and manually map the hashes to their values in a python dictionary.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -60,7 +63,7 @@ const Blogs = () => {
           />
           <Carousel.Caption>
             <h3>Why I am Learning Vim</h3>
-            <p>Vim is a highly configurable text editor built to enable efficient text editing. It is an improved version of the vi editor distributed…</p>
+            <p style={classes.description}>Vim is a highly configurable text editor built to enable efficient text editing. It is an improved version of the vi editor distributed…</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -71,7 +74,7 @@ const Blogs = () => {
           />
           <Carousel.Caption>
             <h3>The Flaws of Communication</h3>
-            <p>Imagine two groups of allied gangs each on opposing sides of a city (A and B). In between them is a rival gang(C). The outer city gangs…</p>
+            <p style={classes.description}>Imagine two groups of allied gangs each on opposing sides of a city (A and B). In between them is a rival gang(C). The outer city gangs…</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -82,7 +85,7 @@ const Blogs = () => {
           />
           <Carousel.Caption>
             <h3>Quick Start: Node.Js, Express, MongoDB</h3>
-            <p>Welcome Developers, I am going to explain how to get started with Node.js, Express and MongoDb. I won’t go into depth explaining the code…</p>
+            <p style={classes.description}>Welcome Developers, I am going to explain how to get started with Node.js, Express and MongoDb. I won’t go into depth explaining the code…</p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
