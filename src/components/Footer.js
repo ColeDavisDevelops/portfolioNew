@@ -42,8 +42,8 @@ const Footer = () => {
         </Typography>
         <Typography variant="h4" align="left">
           <Button 
-            endIcon={<MailIcon className={classes.email}/>} 
-            style={{color: 'white', fontSize: 30}} 
+            startIcon={<MailIcon className={classes.email}/>} 
+            style={{color: 'white', fontSize: 15}} 
           >
             ColeBuildandDevelop@gmail.com
           </Button>
