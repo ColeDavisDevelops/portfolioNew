@@ -56,7 +56,7 @@ const Main = () => {
           Software Engineer
         </Typography>
         <Typography style={{color: 'rgb(170, 170, 170)'}} variant="h6" align="center">
-          I am a problem solver who codes!
+          Dedicated and highly motivated problem solver!
         </Typography>
       </Grid>
       <Grid className={classes.workContainer} item container xs={12}>
