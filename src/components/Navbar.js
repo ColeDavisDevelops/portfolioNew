@@ -150,4 +150,4 @@ const Navbar = (props) => {
   );
 }
 
-export default withMediaQuery('(min-width:1900px)')(Navbar);
+export default withMediaQuery('(min-width:1000px)')(Navbar);
