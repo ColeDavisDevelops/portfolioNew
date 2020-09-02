@@ -44,9 +44,8 @@ const Footer = () => {
           <Button 
             endIcon={<MailIcon className={classes.email}/>} 
             style={{color: 'white', fontSize: 30}} 
-            target="_blank" 
-            href="http://colebuildanddevelop@gmail.com">
-            Email
+          >
+            ColeBuildandDevelop@gmail.com
           </Button>
         </Typography>
       </footer>
