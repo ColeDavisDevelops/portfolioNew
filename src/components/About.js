@@ -42,15 +42,9 @@ const About = () => {
           </Grid>
           <Grid item xs={12}>
             <Typography className={classes.text} align="left" variant="h6">
-              I find my health to be dependent on being laser focused on progressing towards a goal. 
-              My first true passion was trading and investing. What I loved about trading 
-              was the complexity that came with markets and finding profitable strategies. In 2017 I transitioned to
-              playing poker professionally because of its many parallels to trading. Poker and trading ultimately left me wanting more due 
-              to their zero sum nature and my willingness to create value. For these reasons in 2019 I decided to pursue a career in technology. I soon found a foot in the industry as an information technology 
-              support specialist. After six months I developed more direction and decided to specialize in software engineering.
-              What I love about software engineering is the amount of things there are to learn and create. Exercising my coding knowledge and seeing my growth as 
-              a programmer is fulfilling and exciting work. Furthermore programming being industry agnostic allows my skills to possess a dynamic value proposition. For these reasons I look forward to 
-              giving my full focus and attention to my craft as a software engineer.   
+              I find my health to be dependent on being laser-focused on progressing towards a goal. 
+              My first real passion was trading and investing. What I loved about trading was the complexity that came with markets and finding profitable strategies. In 2017 I transitioned to playing poker professionally because of its many parallels to trading. Poker and trading ultimately left me wanting more due to their zero-sum nature and my willingness to create value. For these reasons, in 2019, I decided to pursue a career in technology. I soon found a foot in the industry as an information technology support specialist. After six months, I developed more direction and decided to specialize in software engineering.
+              What I love about software engineering is the number of things there are to learn and create. Exercising my coding knowledge and seeing my growth as a programmer is fulfilling and exciting work. Furthermore, programming being industry-agnostic allows my skills to possess a dynamic value proposition.
             </Typography>
           </Grid>
         </Grid>

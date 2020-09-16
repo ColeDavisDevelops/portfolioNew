@@ -40,10 +40,7 @@ const Projects = () => {
           image={stonkImg}
           stack={[reactIcon, reduxIcon, nodeIcon, mongoIcon]}
           description={
-            `StonkKings gives users the opportunity to create and participate in tournaments varying in entry fees, entry limits, and durations. Upon entering a tournament, users are granted a simulated trading account which they use
-            to make simulated trades. When the tournament concludes, the user with the highest account balance is granted all the entry fees accumulated from that tournament's entries.
-            I created StonkKings to allow new traders to compete against a known player pool for an arbitrarily small sum of money as well as reinvent meta strategies when it comes to generating returns trading stocks. 
-            The backend was written with model, view, and controller design patterns using NodeJs, Mongoose, and MongoDb. The frontend was created with react and redux for central state management, and Material UI for styling.`
+            `StonkKings allows users to create and participate in tournaments varying in entry fees, entry limits, and durations. Upon entering a tournament, users receive a simulated trading account to make simulated trades. When the tournament concludes, the user with the highest account balance receives all the tournament's entry fees. I created StonkKings to allow new traders to compete against a known player pool for an arbitrarily small sum of money. This restructuring essentially allows new meta strategies to emerge when it comes to generating returns trading stocks. I wrote the backend following model, view, and controller design patterns using NodeJs, Mongoose, and MongoDB. The frontend was conceived with react and redux for central state management, and Material UI for styling.`
           }
           website={"https://stonk-kings.herokuapp.com/"}
           github={"https://github.com/Colebuildanddevelop/TKings"}
@@ -58,9 +55,9 @@ const Projects = () => {
           image={friendsImg}
           stack={[reactIcon, reduxIcon, 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
           description={
-            `FriendsWithVidz allows users to add YouTube videos to a public queue. Videos play server side ensuring everyone is experiencing the video at the same time. While a video is being played, the user who queued the video is displayed. 
-            This grants the viewing audience the ability to express their liking for the video, or to cast a vote to skip the video. I added this feature to create incentives for users to only queue videos that the viewing party will enjoy.
-            Furthermore a live chat allows for discussion create an alive, social experience. FriendsWithVidz was created with Firebase, React, Redux, and Material UI.`
+            `FriendsWithVidz allows users to add YouTube videos to a public queue. Videos play server-side, ensuring everyone is experiencing the video at the same time. While a video is playing, the user who queued the video is displayed. 
+            Displaying the user in this way grants the viewing audience the ability to express their liking for the video or cast a vote to skip the video. I added this feature to create incentives for users to only queue videos that the viewing party will enjoy.
+            Furthermore, a live chat allows for discussion to create an alive, social experience. FriendsWithVidz was built with Firebase, React, Redux, and Material UI.`
           }
           website={"https://friendswithvids.firebaseapp.com/"}
           github={"https://github.com/Colebuildanddevelop/friendswithvids"}
@@ -75,8 +72,8 @@ const Projects = () => {
           image={predictImg}
           stack={[reactIcon, 'https://cdn-images-1.medium.com/max/400/1*uFuRJ8osF_ma0FF7Un1cag.png', 'https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg', 'https://material-ui.com/static/logo.png']}
           description={
-            `All state and user funds are handled by solidity code I wrote hosted on the Ethereum Network. A decentralized backend provides users transparency and ensures that I don't have access to funds or the ability to change computations associated with tournaments. 
-            The aim of the competition is to predict the closing price of the given asset at the end of a given duration. Once a tournament has started, predictions are no longer accepted. In order to make a prediction, users must pay an associated fee.
+           `All state and user funds are handled by solidity code I wrote hosted on the Ethereum Network. A decentralized backend provides users transparency. Furthermore, hosting on Ethereum ensures that I don't have access to funds and cannot modify logic or state associated with tournaments. 
+            Users compete by casting predictions concerning a given asset’s closing price at the end of a given duration. Once a tournament has started, predictions are no longer accepted. To make a prediction, users must pay an associated fee.
             Users can make as many predictions as they please before the tournament starts. When the tournament concludes, the user with the closest prediction to the asset's price at that time will be awarded the accumulated fees from all user predictions. 
             `
           }
@@ -111,7 +108,7 @@ const Projects = () => {
           stack={[reactIcon, railsIcon, bootstrapIcon, postgresqlIcon]}
           description={`
             A platform that allows users to create playlists and share with others! Users can vote on which playlist they think is best and sort playlists by popularity. 
-            Created using the YouTube API, Ruby on Rails for object relational mapping, JWT for user authentication, PostgreSQL for data storage and React Bootstrap for styling.
+            Created using the YouTube API, Ruby on Rails for object-relational mapping, JWT for user authentication, PostgreSQL for data storage, and React Bootstrap for styling.
           `}
           website={'https://www.youtube.com/watch?v=4YI3ROmPnB8'}
           github={'https://github.com/Colebuildanddevelop/mod4-project'}
@@ -126,9 +123,9 @@ const Projects = () => {
           image={notRedditImg}
           stack={[railsIcon]}
           description={`
-            Platform that allows users to make posts in different user created categories, as well as create categories themselves and subscribe to these categories.
-            Users can like and comment on posts as well as sort posts by popularity. NotReddit was created using a Rails backend for ORM, embedded ruby for the frontend and MySQL for data
-            persistence.  
+            A social platform that allows users to make posts related to different user-created categories. Users also can create categories themselves and subscribe to these categories.
+            Users can like and comment on posts as well as sort posts by popularity. NotReddit was created using a Rails backend for ORM, embedded ruby for the frontend, and MySQL for data
+            persistence.   
           `}
           website={'https://www.youtube.com/watch?v=DjTKA2AZJ0M'}
           github={'https://github.com/Colebuildanddevelop/Mod2-project'}
