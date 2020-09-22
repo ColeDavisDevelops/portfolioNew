@@ -123,7 +123,7 @@ const Navbar = (props) => {
                 </IconButton>
                 <SwipeableDrawer open={drawerOpen} onClose={() => setDrawerOpen(false)} anchor='right'>
                   <List style={{padding: 0}}>
-                    <ListItem className={classes.listItem} component="a" target='_blank' href='https://docs.google.com/document/d/e/2PACX-1vRSJk-NgIjoBdFVykocdBlveWbxkQXhaKooxzKdoRt2mgg-A6FHMzHCQFn0AuaErXZcDFLHMfMW__8M/pub' button key={"Github"}>
+                    <ListItem className={classes.listItem} component="a" target='_blank' href='https://docs.google.com/document/d/105yHjYIRqL0oiIUllId69qzcJR70Dy6sUMgpJS1JPJE/edit?usp=sharing' button key={"Github"}>
                       <ListItemIcon><DescriptionIcon className={classes.icon} /></ListItemIcon>
                       <ListItemText classes={{primary: classes.listItemText}}  primary={"Resume"} />
                     </ListItem>
