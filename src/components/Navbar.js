@@ -103,7 +103,7 @@ const Navbar = (props) => {
             </Typography>
             {props.mediaQuery ? (
               <>
-                <IconButton href="https://docs.google.com/document/d/e/2PACX-1vRSJk-NgIjoBdFVykocdBlveWbxkQXhaKooxzKdoRt2mgg-A6FHMzHCQFn0AuaErXZcDFLHMfMW__8M/pub" target="_blank">
+                <IconButton href="https://docs.google.com/document/d/105yHjYIRqL0oiIUllId69qzcJR70Dy6sUMgpJS1JPJE/edit?usp=sharing" target="_blank">
                   <DescriptionIcon className={classes.icon} />
                 </IconButton> 
                 <IconButton href="https://github.com/Colebuildanddevelop" target="_blank">
